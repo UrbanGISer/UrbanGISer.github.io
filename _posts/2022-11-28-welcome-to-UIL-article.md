@@ -45,6 +45,7 @@ This website's work is related to  [Spatial Data Lab project][Spatial Data Lab p
 
 
 for future, we will post some key code snippets here as well.
+
 $ a \* b = c ^ b $
 
 $ 2^{\frac{n-1}{3}} $
