@@ -40,7 +40,7 @@ I invite you to join us on this groundbreaking endeavor as we usher in a new era
 
 ## Collaboration
 
-This website's work is related to  [Spatial Data Lab project][Spatial Data Lab project]for more info on how to get the most out of Jekyll. File all bugs/feature requests at [KNIME Geospatial Analytics][KNIME Geospatial Analytics]. .
+This website's work is related to  [Spatial Data Lab project][Spatial Data Lab project]. For more info on KNIME extension, go to [KNIME Geospatial Analytics][KNIME Geospatial Analytics].
 
 [Spatial Data Lab project]: https://projects.iq.harvard.edu/chinadatalab
 [KNIME Geospatial Analytics]: https://github.com/spatial-data-lab/knime-geospatial-extension
