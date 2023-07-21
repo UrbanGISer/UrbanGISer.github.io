@@ -20,8 +20,7 @@ tags: UIL KNIME SDL Geospatial Analytics
 sidebar: []
 ---
 
-THis is a GitHun website for  `Urban Innovation Lab`.
-Just a test and try. 
+THis is a GitHub website for  `Urban Innovation Lab`.
 
 
 ## section 1
