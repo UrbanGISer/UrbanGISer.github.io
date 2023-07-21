@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Welcome to Open Urban Science！
+title: Open Urban Science！
 subtitle: Urban Innovation Lab.
 author: Lingbo
 categories: UIL
@@ -20,57 +20,14 @@ tags: UIL KNIME SDL Geospatial Analytics
 sidebar: []
 ---
 
-THis is a GitHun website for  `Urban Innovation Lab`.
-Just a test and try. 
+THis is a GitHun website for  `Open Urban Science`.
 
+Welcome to the realm of Open Urban Science, where innovation, collaboration, and data-driven insights converge to shape the cities of tomorrow. As a leading contributor in this field, I am thrilled to introduce you to this dynamic and interdisciplinary domain that seeks to address the challenges and opportunities of urban living through open access to data, tools, and knowledge.
 
-## section 1
+At the forefront of Open Urban Science, my work has been instrumental in developing and implementing advanced geospatial analytics and workflow-based approaches. Through my leadership, we are creating a Python-based extension for KNIME, a powerful platform that empowers researchers and practitioners to harness the full potential of data analytics in urban contexts.
 
-This website  provides code snippets for the workbook CMGIS_V3:
+Our collaborative efforts aim to democratize urban data analysis, making it accessible to a diverse range of stakeholders, from policymakers and researchers to community members. By promoting openness and transparency, we aspire to foster inclusive urban planning, resilience, and sustainability.
 
-{% highlight ruby %}
-def print_hi(name)
-puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Joining the Open Urban Science community provides a unique opportunity to engage with like-minded experts and enthusiasts who share a common goal: to leverage data science and computational social science for the greater good. Together, we can unlock transformative insights, identify patterns, and craft evidence-based solutions to shape vibrant, livable, and resilient cities for generations to come.
 
-## section 2
-
-This website's work is related to  [Spatial Data Lab project][Spatial Data Lab project]for more info on how to get the most out of Jekyll. File all bugs/feature requests at [KNIME Geospatial Analytics][KNIME Geospatial Analytics]. .
-
-[Spatial Data Lab project]: https://projects.iq.harvard.edu/chinadatalab
-[KNIME Geospatial Analytics]: https://github.com/spatial-data-lab/knime-geospatial-extension
-
-
-for future, we will post some key code snippets here as well.
-
-$ a \* b = c ^ b $
-
-$ 2^{\frac{n-1}{3}} $
-
-$ \int_a^b f(x)\,dx. $
-
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-  cout << "Hello World!";
-  return 0;
-}
-// prints 'Hi, Tom' to STDOUT.
-```
-
-```python
-class Person:
-  def __init__(self, name, age):
-    self.name = name
-    self.age = age
-
-p1 = Person("John", 36)
-
-print(p1.name)
-print(p1.age)
-```
+I invite you to be a part of this extraordinary movement where your contributions, ideas, and passion for urban innovation will not only drive cutting-edge research but also empower real-world impact. Together, let's embrace the power of open collaboration and forge a brighter future for urban environments worldwide. Welcome to Open Urban Science!
