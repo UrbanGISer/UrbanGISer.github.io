@@ -20,7 +20,7 @@ tags: UIL KNIME SDL Geospatial Analytics
 sidebar: []
 ---
 
-THis is a GitHun website for  `Open Urban Science`.
+THis is a GitHub website for  `Open Urban Science`.
 
 Welcome to the realm of Open Urban Science, where innovation, collaboration, and data-driven insights converge to shape the cities of tomorrow. As a leading contributor in this field, I am thrilled to introduce you to this dynamic and interdisciplinary domain that seeks to address the challenges and opportunities of urban living through open access to data, tools, and knowledge.
 
