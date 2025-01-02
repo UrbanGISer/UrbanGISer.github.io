@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>About | UrbanGISer</title>
+<meta name="generator" content="Jekyll v4.3.4">
+<meta property="og:title" content="About">
+<meta name="author" content="UrbanGISer">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+<link rel="canonical" href="/jekyll-theme-yat/about.html">
+<meta property="og:url" content="/jekyll-theme-yat/about.html">
+<meta property="og:site_name" content="UrbanGISer">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="About">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"UrbanGISer"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"About","url":"/jekyll-theme-yat/about.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/jekyll-theme-yat/assets/css/main.css">
+  <script src="/jekyll-theme-yat/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="/jekyll-theme-yat/feed.xml" title="UrbanGISer">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/jekyll-theme-yat/">
+  <img class="site-favicon" title="UrbanGISer" src="" onerror="this.style.display='none'">
+  UrbanGISer
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/jekyll-theme-yat/about.html">ABOUT</a><a class="page-link" href="/jekyll-theme-yat/archives.html">ARCHIVES</a><a class="page-link" href="/jekyll-theme-yat/categories.html">CATEGORIES</a><a class="page-link" href="/jekyll-theme-yat/">HOME</a><a class="page-link" href="/jekyll-theme-yat/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <h2>About</h2>
+
+<p>
+    Lingbo Liu,<br> Research Associate @ Center for Geographic Analysis, <br>Harvard University. <br>Email :
+    lingboliu@fas.harvard.edu
+</p>
+
+<p>
+    Lingbo Liu is a Research Associate at the CGA. He was a CGA post-doctoral research fellow, and previously
+    a tenured lecturer in the Department of Urban Planning, School of Urban Design, Wuhan University, and
+    a visiting scholar at Harvard CGA. Lingbo leads the Spatial Data Lab project at the CGA, focusing on the
+    development of advanced geospatial models and an open-source visual programming platform for GeoAI research,
+    as well as training programs to democratize geospatial data science. His research focuses on the study of healthy
+    cities,
+    utilizing advanced geospatial AI models to capture the spatiotemporal features of urban systems. He aims to parse
+    the
+    coupling mechanisms of the space-human system to provide decision support for public policy to make cities
+    healthier.
+</p>
+
+<h2>CV</h2>
+
+<h4>EDUCATION</h4>
+<table>
+    <tr>
+        <td align="left">2021-2022</td>
+        <td align="left">Visiting Scholar, Center for Geographic Analysis, Harvard University</td>
+    </tr>
+    <tr>
+        <td align="left">2012-2018</td>
+        <td align="left">PHD, Digital Urban Administration and Planning, School of Urban Design, Wuhan University</td>
+    </tr>
+    <tr>
+        <td align="left">2014-2015</td>
+        <td align="left">Visiting Scholar, Department of Geography and Anthropology, Louisiana State University (LSU)</td>
+    </tr>
+    <tr>
+        <td align="left">2002-2005</td>
+        <td align="left">Master of Engineering, (Urban Planning &amp; Design), School of Urban Design, Wuhan University</td>
+    </tr>
+    <tr>
+        <td align="left">1998-2002</td>
+        <td align="left">Bachelor of Engineering, (Urban Planning &amp; Design), School of Urban Design, Wuhan University</td>
+    </tr>
+</table>
+
+<h4>WORK EXPERIENCE</h4>
+<table>
+    <tr>
+        <td align="left">2024-</td>
+        <td align="left">Research Associate, Center for Geographic Analysis, Harvard University</td>
+    </tr>
+    <tr>
+        <td align="left">2022-2024</td>
+        <td align="left">Postdoc Research Fellow, Center for Geographic Analysis, Harvard University</td>
+    </tr>
+    <tr>
+        <td align="left">2016-2022</td>
+        <td align="left">Deputy Director, Laboratory Center, School of Urban Design, Wuhan University</td>
+    </tr>
+    <tr>
+        <td align="left">2008-2022</td>
+        <td align="left">Tenured Lecturer, Department of Urban Planning, School of Urban Design, Wuhan University</td>
+    </tr>
+    <tr>
+        <td align="left">2009-2018</td>
+        <td align="left">Chief Planner, Hainan Huadu Urban Design Institute.Co.Ltd</td>
+    </tr>
+    <tr>
+        <td align="left">2005-2008</td>
+        <td align="left">Assistant Lecturer, Department of Urban Planning, School of Urban Design, Wuhan University</td>
+    </tr>
+</table>
+
+
+<h4>BOOKS</h4>
+<table>
+    <tr>
+        <th>Year</th>
+        <th>Book</th>
+    </tr>
+    <tr>
+        <td>2023</td>
+        <td>Fahui Wang, <strong>Lingbo Liu</strong>, <em>Computational Methods and GIS Applications in Social Science, 3
+Edition</em>, CRC Press, Boca Raton, 2023</td>
+    </tr>
+    <tr>
+        <td>2023</td>
+        <td>
+<strong>Lingbo Liu</strong>, Fahui Wang, <em>Computational Methods and GIS Applications in Social Science-
+KNIME Lab Manual</em>, CRC Press, Boca Raton, 2023</td>
+    </tr>
+    <tr>
+        <td>2019</td>
+        <td>Fahui Wang, <em>Application of GIS and Quantitative Methods in Social and Economic Research (Chinese
+Version)</em>, The Commercial Press<br>Translator: <strong>Lingbo Liu</strong>, 2019</td>
+    </tr>
+    <tr>
+        <td>2016</td>
+        <td>Jiandong Peng, <strong>Lingbo Liu</strong>, Guanghui Zhang, <em>Urban Design Thinking and Expression</em>,
+China Building Industry Press, 2016 (in Chinese)</td>
+    </tr>
+</table>
+
+<h4>ARTICLES</h4>
+<table>
+    <tr>
+        <th align="left">Year</th>
+        <th align="left">Article</th>
+    </tr>
+    <tr>
+        <td valign="top">2024</td>
+        <td valign="top">
+<strong>Liu, L.</strong> 2024.
+An ensemble framework for explainable geospatial machine learning models. International Journal of Applied
+Earth
+Observation and Geoinformation, 132, 104036. <a href="https://doi.org/10.1016/j.jag.2024.104036">https://doi.org/10.1016/j.jag.2024.104036</a>
+</td>
+    </tr>
+
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Liu, C., Peng, Z., <strong>Liu, L.*</strong>, Wu, H., Kinne, J., Cai, M., &amp; Li, S. (2024).
+XAI in geographic analysis of innovation: Evaluating proximity factors in the innovation networks of Chinese
+technology companies through web-based data. Applied Geograhy, 171, 103373. <a href="https://doi.org/10.1016/j.apgeog.2024.103373">https://doi.org/10.1016/j.apgeog.2024.103373</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">
+<strong>Liu, L.</strong>; Wang, F., Fu, X., Kötter, T., Sturm, K., Guan, W. W., &amp; Bao, S.
+(2024).
+Elevating the RRE Framework for Geospatial Analysis with Visual Programming Platforms: An Exploration with
+Geospatial
+Analytics Extension for KNIME. International Journal of Applied Earth Observation and Geoinformation, 130,
+  <li><a href="https://doi.org/10.1016/j.jag.2024.103948">https://doi.org/10.1016/j.jag.2024.103948</a></li>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Wang, K., Peng, Z., Cai, M., Wu, H., <strong>Liu, L.</strong>, &amp; Sun, Z. (2024). Coupling
+graph neural networks and travel mode choice for human mobility prediction. Physica A: Statistical Mechanics
+and
+its Applications, 129872. <a href="https://doi.org/10.1016/j.physa.2024.129872">https://doi.org/10.1016/j.physa.2024.129872</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Wang, S., Huang, X., Liu, P., Zhang, M., Biljecki, F., Hu, T., Fu, X., <strong>Liu,
+L.</strong>,
+Liu, X., &amp; Wang, R. (2024). Mapping the landscape and roadmap of geospatial artificial intelligence (GeoAI)
+in
+quantitative human geography: An extensive systematic review. International Journal of Applied Earth
+Observation
+and Geoinformation, 128, 103734.<a href="https://doi.org/10.1016/j.jag.2024.103734">https://doi.org/10.1016/j.jag.2024.103734</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">
+<strong>Liu, L.</strong>; Fu, X.; Kötter, T.; Sturm, K.; Haubold, C.; Guan, W. W.; Bao, S. &amp;
+Wang, F.. 2024.
+Geospatial Analytics Extension for KNIME. SoftwareX, 25, 101627. <a href="https://doi.org/10.1016/j.softx.2023.101627">https://doi.org/10.1016/j.softx.2023.101627</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Liu, C.; Peng, Z.; <strong>Liu, L.</strong>; &amp; Wu, H. 2024. Analysis of Spatiotemporal
+Characteristics
+and Influencing Factors of Electric Vehicle Charging Based on Multisource Data.
+ISPRS International Journal of Geo-Information, 13(2), 37. <a href="https://doi.org/10.3390/ijgi13020037">https://doi.org/10.3390/ijgi13020037</a>.</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Tian, P., Cai, M., Sun, Z., Liu, S., Wu, H., <strong>Liu, L.*</strong>, &amp; Peng, Z. (2024).
+Effects of 3D urban morphology on CO<sub>2</sub> emissions using machine learning: Towards spatially
+tailored low-carbon strategies in Central Wuhan, China.
+<em>Urban Climate, 57</em>, 102122.
+<a href="https://doi.org/10.1016/j.uclim.2024.102122">https://doi.org/10.1016/j.uclim.2024.102122</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Wang, K., Peng, Z., Cai, M., Wu, H., <strong>Liu, L.</strong>,Sun, Z. (2024).
+Coupling graph neural networks and travel mode choice for human mobility prediction.
+<em>Physica A: Statistical Mechanics and its Applications, 646</em>, 129872.
+<a href="https://doi.org/10.1016/j.physa.2024.129872">https://doi.org/10.1016/j.physa.2024.129872</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">2023</td>
+        <td valign="top">
+<strong>Liu, L.</strong>; Alford-Teaster, J.; Onega; T.; Wang, F.. 2023. Refining 2SVCA method
+for measuring
+telehealth accessibility of primary care physicians in Baton Rouge, Louisiana. Cities, 138: 104364. <a href="https://doi.org/10.1016/j.cities.2023.104364">https://doi.org/10.1016/j.cities.2023.104364</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Wang, F.; Zeng, Y.; <strong>Liu, L.</strong>; Onega, T.. 2023. Disparities in spatial
+accessibility of primary
+care in Louisiana: From physical to virtual accessibility. Frontiers in Public Health, 11:1154574. <a href="https://doi.org/10.3389/fpubh.2023.1154574">https://doi.org/10.3389/fpubh.2023.1154574</a>.</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Sun, Z.; Kang, D.; Jiao, H.; Yang Y.; Xue, W.; Wu, H.; <strong> Liu, L. </strong>; Su, Y.;
+Peng, Z.. 2023. Spatial and Temporal
+Evolution of the Characteristics of Spatially Aggregated Elements in an Urban Area: A Case Study of Wuhan,
+China. ISPRS International Journal of Geo-Information, 12 (11), 448. <a href="https://doi.org/10.3390/ijgi12110448">https://doi.org/10.3390/ijgi12110448</a>.</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Wang, K.; Zhang, L.; Cai, M.; <strong>Liu, L.</strong>; Wu, H.; Peng, Z. Measuring Urban
+Poverty Spatial by
+Remote Sensing and Social Sensing Data: A Fine-Scale Empirical Study from Zhengzhou. Remote Sensing. 2023,
+15, 381. <a href="https://doi.org/10.3390/rs15020381">https://doi.org/10.3390/rs15020381</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Wan, L., Chen, J. <em>, Wu, H., Su, F., Jiang, Q., Ma, L., Chen, H., Peng, Z., Sun, Z.,
+<strong>Liu, L.</strong></em>,
+&amp; Chen, L. (2023). Deep learning for inflammatory diseases classification based on reflectance confocal
+microscopy. Journal of the American Academy of Dermatology, 88(5), e283–e284. <a href="https://doi.org/10.1016/j.jaad.2022.09.043">https://doi.org/10.1016/j.jaad.2022.09.043</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top" style="text-align: right">Liu, C.; Peng, Z.; Liu, L.; Li, S. Innovation Networks of Science and
+Technology Firms
+Evidence from China. Land, 2023, 12, 1283. https://doi.org/10.3390/land12071283</td>
+    </tr>
+    <tr>
+        <td valign="top">2022</td>
+        <td valign="top">
+<strong>Liu, L.</strong>; Yu, H.; Zhao, J.; Wu, H.; Peng, Z.; Wang, R. Multiscale Effects of
+Multimodal Public
+Facilities Accessibility on Housing Prices Based on MGWR: A Case Study of Wuhan, China. ISPRS International
+Journal of Geo-Information, 2022. 11(1).<a href="https://doi.org/10.3390/ijgi11010057">https://doi.org/10.3390/ijgi11010057</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">
+<strong>Liu, L.</strong>; Wang, R.; Guan, W W.; Bao, S., Yu, H.; Fu, X.; Liu, H. Assessing
+Reliability of
+Chinese Geotagged Social Media Data for Spatiotemporal Representation of Human Mobility. ISPRS International
+Journal of Geo-Information, 2022. 11(2).<a href="https://doi.org/10.3390/ijgi11020145">https://doi.org/10.3390/ijgi11020145</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Wang, K., Sun, Z., Cai, M., <strong>Liu, L.</strong>, Wu, H., &amp; Peng, Z. (2022). Impacts of
+Urban Blue-Green
+Space on Residents’ Health: A Bibliometric Review. International journal of environmental research and
+public health, 19(23), 16192. <a href="https://doi.org/10.3390/ijerph192316192">https://doi.org/10.3390/ijerph192316192</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Chen, L.; <strong>Liu, L.</strong>; Wu, H.; Peng, Z.; Sun, Z. Change of Residents’ Attitudes
+and Behaviors
+toward Urban Green Space Pre- and Post- COVID-19 Pandemic. Land 2022, 11, 1051. <a href="https://doi.org/10.3390/land11071051">https://doi.org/10.3390/land11071051</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Wang, R.; <strong>Liu, L.</strong>; Wu, H.; Peng, Z. Correlation Analysis between Urban
+Elements and COVID-19
+Transmission Using Social Media Data. Int. J. Environ. Res. Public Health 2022, 19, 5208. <a href="https://doi.org/10.3390/ijerph19095208">https://doi.org/10.3390/ijerph19095208</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">2021</td>
+        <td valign="top">
+<strong>Liu, L.</strong>; Peng, Z.; Wu, H. Entropy Models and Their Applications in Urban
+Studies, City Planning Review.2021,45(12):27-39.
+(Chinese,2021)</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Liu, L.; Hu, T.; Bao, S.; Wu, H.; Peng, Z.; Wang, R. The Spatiotemporal Interaction Effect of
+COVID-19 Transmission in the United States. ISPRS International Journal of Geo-Information 2021, 10, 387.<a href="https://doi.org/10.3390/ijgi10060387">https://doi.org/10.3390/ijgi10060387</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Peng, Z.; Ao, S.; <strong>Liu, L.</strong> *; Bao, S.; Hu, T.; Wu, H.; Wang, R. Estimating
+Unreported COVID-19
+Cases with a Time-Varying SIR Regression Model. Int. J. Environ. Res. Public Health 2022, 19, 5208. <a href="https://doi.org/10.3390/ijerph18031090">https://doi.org/10.3390/ijerph18031090</a>
+</td>
+    </tr>
+    <td valign="top"> </td>
+    <td valign="top">Zhao, J.; Peng, Z.; <strong>Liu, L.</strong> *; Yu, Y.; Yu, Y. Evaluation on the Internal Public
+        Space Quality in
+        Affordable Housing Based on Multi-Source Data and IPA Analysis. Land, 2021. 10(10): p. 1000<a href="https://doi.org/10.3390/land10101000">https://doi.org/10.3390/land10101000</a>
+</td>
+    
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Zhao, J.; Peng, Z.; <strong>Liu, L.</strong>*; Yu, Y.; Shang, Z. Public Space Layout
+Optimization in Affordable
+Housing Based on Social Network Analysis. Land, 2021. 10(9): p. 955<a href="https://doi.org/10.3390/land10090955">https://doi.org/10.3390/land10090955</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Peng, Z., Bai, G., Wu, H., <strong>Liu, L.</strong>, &amp; Yu, Y. (2021). Travel mode recognition
+of urban residents
+using mobile phone data and MapAPI. Environment and Planning B: Urban Analytics and City Science, 48(9),
+2574–2589. <a href="https://doi.org/10.1177/2399808320983001">https://doi.org/10.1177/2399808320983001</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Sun, Z.; Jiao, H.; Wu, H.; Peng, Z.; <strong>Liu, L.</strong>. Block2vec: An Approach for
+Identifying Urban
+Functional Regions by Integrating Sentence Embedding Model and Points of Interest. ISPRS Int. J. Geo-Inf.
+2021, 10, 339. <a href="https://doi.org/10.3390/ijgi10050339">https://doi.org/10.3390/ijgi10050339</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top" style="text-align: right">Xiong, X.; Liu, L.; Peng, Z.; Wu, H. Physical Activities in Public Squares
+The Impact of
+Companionship on Chinese Residents’ Health. Land 2021, 10, 720. https://doi.org/10.3390/land10070720</td>
+    </tr>
+    <tr>
+        <td valign="top">2020</td>
+        <td valign="top">Peng, Z.; Wang, R.; <strong>Liu, L.</strong> *; Wu, H. Exploring Urban Spatial Features of
+COVID-19 Transmission
+in Wuhan Based on Social Media Data. ISPRS International Journal of Geo-Information 2020, 9, 402. <a href="https://doi.org/10.3390/ijgi9120669">https://doi.org/10.3390/ijgi9120669</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Hu, T.; Guan, W.W.; Zhu, X.; Shao, Y.; <strong>Liu, L.</strong>, et al. Building an Open
+Resources Repository
+for COVID-19 Research. Data and Information Management 2020, 4, 130-147.<a href="https://doi.org/10.2478/dim-2020-0012">https://doi.org/10.2478/dim-2020-0012</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Peng, Z.; Wang, R.; <strong>Liu, L.</strong> *; Wu, H. Fine-Scale Dasymetric Population Mapping
+with Mobile
+Phone and Building Use Data Based on Grid Voronoi Method. ISPRS International Journal of Geo-Information
+2020, 9, 344. <a href="https://doi.org/10.3390/ijgi9060344">https://doi.org/10.3390/ijgi9060344</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Wang, X., Zhou, Q., He, Y., <strong>Liu, L.</strong>, Ma, X., Wei, X., Jiang, N., Liang, L.,
+Zheng, Y., Ma, L.,
+Xu, Y., Yang, D., Zhang, J., Yang, B., Jiang, N., Deng, T., Zhai, B., Gao, Y., Liu, W., Bai, X., … Gao, Z.
+(2020). Nosocomial outbreak of COVID-19 pneumonia in Wuhan, China. The European respiratory journal, 55(6),
+  <li><a href="https://doi.org/10.1183/13993003.00544-2020">https://doi.org/10.1183/13993003.00544-2020</a></li>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">
+<strong>Liu, L.</strong>; Zhong, Y.; Ao, S.; Wu, H. Exploring the Relevance of Green Space and
+Epidemic Diseases
+Based on Panel Data in China from 2007 to 2016. International Journal of Environmental Research and Public
+Health 2019, 16, 2551. <a href="https://doi.org/10.3390/ijerph16142551">https://doi.org/10.3390/ijerph16142551</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">2019</td>
+        <td valign="top">
+<strong>Liu, L.</strong>; Xia, B.; Wu, H.; Zhao, J.; Peng, Z.; Yu, Y. Delimitating the Natural
+City with Points
+of Interests Based on Service Area and Maximum Entropy Method. Entropy 2019, 21, 458. <a href="https://doi.org/10.3390/e21050458">https://doi.org/10.3390/e21050458</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Jin, P.; Gao, Y.; Liu, L*.; Peng, Z.; Wu, H. Maternal Health and Green Spaces in China: A
+Longitudinal Analysis of MMR Based on Spatial Panel Model. Healthcare 2019, 7, 154. <a href="https://doi.org/10.3390/healthcare7040154">https://doi.org/10.3390/healthcare7040154</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">
+<strong>Liu, L.</strong>; Peng, Z.; Wu, H. Classification of POI Natural Cities Scale and
+Hierarchy Based on
+Head/Tail Breaks, Urban Planning International 2019,3. (Chinese,2019)</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">
+<strong>Liu, L.</strong>; Hu, T.; Bao, S.; Wu, H.; Peng, Z.; Wang, R. The Spatiotemporal
+Interaction Effect of
+COVID-19 Transmission in the United States. ISPRS International Journal of Geo-Information 2019, 10, 387. <a href="https://doi.org/10.3390/ijgi10060387">https://doi.org/10.3390/ijgi10060387</a>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Peng, Z.; Ao, S.; <strong>Liu, L.</strong> *; Bao, S.; Hu, T.; Wu, H.; Wang, R. Estimating
+Unreported COVID-19
+Cases with a Time-Varying SIR Regression Model. International Journal of Environmental Research and Public
+Health 2019, 18, 1090. <a href="https://doi.org/10.3390/ijerph18051090">https://doi.org/10.3390/ijerph18051090</a>
+</td>
+    </tr>
+</table>
+
+<h4>PRESENTATION</h4>
+<table>
+    <tr>
+        <th align="left">Year</th>
+        <th align="left">Presentation</th>
+    </tr>
+    <tr>
+        <td valign="top">2023</td>
+        <td valign="top">Lingbo Liu, Refining 2SVCA method for measuring telehealth accessibility of primary care
+physicians in Baton Rouge, The Symposium of Spatiotemporal Data Science, Cambridge, MA</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Wendy Guan, Lingbo Liu, Xiaokang Fu, Shuming Bao, Workflow Based Tools for Integrated
+Spatiotemporal Research, Annual conference of American Association of Geographers, Denver</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Xiaokang Fu, Lingbo Liu, Meifang Li, Validation, calibration, and estimation of 2SFCA and
+i2SFCA. A case study from Shenzhen, China based on online appointment data, Annual conference of American
+Association of Geographers, Denver</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Lingbo Liu, Xiaokang Fu, Spatiotemporal Network Analysis of Cities in the Belt and Road
+Initiative Countries based on Social Media Mobility Index, Annual conference of American Association of
+Geographers, Denver</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Lingbo Liu, GIS Moves Online: An Integrated Solution for Spatiotemporal Research, Teaching and
+Applications, Tools of the Trade: The Way Forward, Cambridge, MA</td>
+    </tr>
+    <tr>
+        <td valign="top">2022</td>
+        <td valign="top">Wendy Guan, Lingbo Liu, Tobias Koetter, Geospatial Analytics for All, KNIME Fall Summit</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Wendy Guan, Lingbo Liu, New Release of the Geospatial Extension for KNIME, Harvard CGA, online</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Lingbo Liu, Introduction to Weibo Mobility Index, Future Data Lab webinar, online</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Lingbo Liu, Fahui Wang, Disparities in Telehealth Accessibility to Primary Care Physicians in
+Baton Rouge, Louisiana, The fifth annual Politics and Computational Social Science (PaCSS) conference,
+Cambridge, MA</td>
+    </tr>
+    <tr>
+        <td valign="top">2021</td>
+        <td valign="top">Lingbo Liu, Workbook for Quantitative methods and Socioeconomic Applications in GIS, Future
+Data Lab webinar, online</td>
+    </tr>
+    <tr>
+        <td valign="top">2020</td>
+        <td valign="top">Lingbo Liu, Wuhan’s Rejuvenation Plan for the post-pandemic Era, UN-Habitat-Philippine
+Government Local Government Forum, keynote report, online</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Lingbo Liu, Big Data in Epidemic Prevention and Control, UN-Habitat, COVID-19 Wuhan Guidance
+Papers, Keynote Report, online</td>
+    </tr>
+    <tr>
+        <td valign="top">
+</td>
+        <td valign="top">Lingbo Liu, Workflow-Based Spatial-Temporal Prediction Model and Statistical Analysis of
+Pandemic Data, COVID-19 Data Analysis Series Public Webinar, online</td>
+    </tr>
+    <tr>
+        <td valign="top">2019</td>
+        <td valign="top">Lingbo Liu, Recognition of Urban Expansion Patterns in Asia Based on Local Space Entropy, China
+Urban Planning Annual Conference, Chongqing</td>
+    </tr>
+    <tr>
+        <td valign="top">2018</td>
+        <td valign="top">Lingbo Liu, Landscape Quality Improvement Strategy of Simeitang Park, UN-Habitat Place Making
+Week International Conference, Wuhan</td>
+    </tr>
+</table>
+
+<h4>REPORT</h4>
+<table>
+    <tr>
+        <th align="left">Year</th>
+        <th align="left">Report</th>
+    </tr>
+    <tr>
+        <td valign="top">2020</td>
+        <td valign="top">COVID-19 Wuhan Guidance Papers-Emerging Experiences on Responding to COVID-19 in Chinese Cities
+and Townships, UN-HABITAT</td>
+    </tr>
+    <tr>
+        <td valign="top">2020</td>
+        <td valign="top">Research on urban space quality evaluation system based on Homo Urbanicus theory, Wuhan
+Planning and Research Institute</td>
+    </tr>
+    <tr>
+        <td valign="top">2017</td>
+        <td valign="top">Research on the competitiveness of urban agglomerations in the middle reaches of the Yangtze
+River, Wuhan Planning and Research Institute</td>
+    </tr>
+    <tr>
+        <td valign="top">2016</td>
+        <td valign="top">Research on interpretation of urban built-up area and spatial recognition of metropolitan area
+in Wuhan, Wuhan Planning and Research Institute</td>
+    </tr>
+</table>
+
+<h4>RESEARCH FUNDING</h4>
+<table>
+    <tr>
+        <th align="left">Year</th>
+        <th align="left">Research Funding</th>
+    </tr>
+    <tr>
+        <td valign="top">2021</td>
+        <td valign="top">Spatiotemporal transmission mechanism and modeling of infectious diseases supported by
+multi-source data, Core member, National Natural Science Foundation of China,52078390</td>
+    </tr>
+    <tr>
+        <td valign="top">2020</td>
+        <td valign="top">Interpretation Method of Urban Spatial Structure Based on Big Data and Deep Learning, Core
+member, National Natural Science Foundation of China,51978535</td>
+    </tr>
+</table>
+
+
+    </div>
+
+</article>
+<div class="post-comments"></div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/jekyll-theme-yat/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>Unpublished Work <span class="copyleft">©</span> 2017-2025 UrbanGISer</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/jekyll-theme-yat/feed.xml">via RSS</a>
+</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
