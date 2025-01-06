@@ -1,0 +1,1607 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="/jekyll-theme-yat/feed.xml" rel="self" type="application/atom+xml" /><link href="/jekyll-theme-yat/" rel="alternate" type="text/html" /><updated>2025-01-06T21:37:49+00:00</updated><id>/jekyll-theme-yat/feed.xml</id><title type="html">UrbanGISer</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>UrbanGISer</name></author><entry><title type="html">Geospaital Analytics in KNIME 101</title><link href="/jekyll-theme-yat/gaek/2023/07/01/gaek-101.html" rel="alternate" type="text/html" title="Geospaital Analytics in KNIME 101" /><published>2023-07-01T00:00:00+00:00</published><updated>2023-07-01T00:00:00+00:00</updated><id>/jekyll-theme-yat/gaek/2023/07/01/gaek-101</id><content type="html" xml:base="/jekyll-theme-yat/gaek/2023/07/01/gaek-101.html"><![CDATA[<p>Welcome to Geospaital Analytics in KNIME 101!</p>
+
+<p>Geospatial Analytics is an increasingly essential field, as it allows us to extract valuable insights from location-based data, enabling better decision-making and problem-solving across a wide range of industries. With the Geospatial Analytics Extension for KNIME, you can leverage the full potential of both KNIME’s data analytics capabilities and the rich spatial analysis tools to unlock hidden patterns and relationships within your datasets.</p>
+
+<ol>
+  <li>
+    <p>For laptops or PCs with Windows OS, the system typically has a “C drive” as the main hard drive partition:</p>
+
+    <ul>
+      <li>after installation of KNIME, right click on <code class="language-plaintext highlighter-rouge">knime.exe</code> &gt; <code class="language-plaintext highlighter-rouge">Properties</code> &gt; <code class="language-plaintext highlighter-rouge">Compatibility</code>, check <code class="language-plaintext highlighter-rouge">Run this program as an admistratror</code>.</li>
+      <li>GAEK nodes may encounter failures caused by an unwritable issue in the System drive of the Python environment.</li>
+      <li>Then install Geospaital Analytics Extension for KNIME.</li>
+    </ul>
+  </li>
+  <li>
+    <p>The configuration of a GAEK node might become empty:</p>
+
+    <ul>
+      <li>When the column number is excessively large and the GAEK node pre-reads the columns, leading to a time-consuming process of building the list.</li>
+      <li>This behavior has been observed with <code class="language-plaintext highlighter-rouge">Lat/Lon to Geometry</code> node.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Some community extension can not be found:</p>
+
+    <ul>
+      <li>If can not find the extension in the <code class="language-plaintext highlighter-rouge">File</code> &gt; <code class="language-plaintext highlighter-rouge">install KNIME extension....</code></li>
+      <li>Go to <code class="language-plaintext highlighter-rouge">Help</code> &gt; <code class="language-plaintext highlighter-rouge">Install New Software...</code> &gt; in the Dialog of <code class="language-plaintext highlighter-rouge">Availabe Softeare</code>, click <code class="language-plaintext highlighter-rouge">Manage..</code> &gt; check all site under <code class="language-plaintext highlighter-rouge">Availabe Software Sites</code>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Install KNIME Keras Integration:</p>
+
+    <ul>
+      <li>create a new Python environment for CPU version with a name <code class="language-plaintext highlighter-rouge">knimedlcpu</code> &gt; <code class="language-plaintext highlighter-rouge">conda create -n knimedlcpu python=3.6 h5py=2.8 tensorflow-mkl=1.12 keras=2.2.4 pandas=0.25.3 -c conda-forge</code></li>
+      <li>create a new Python environment for GPU version with a name <code class="language-plaintext highlighter-rouge">knimedlgpu</code> &gt; <code class="language-plaintext highlighter-rouge">conda create -n knimedlgpu python=3.6 h5py=2.8 tensorflow=1.12 keras-gpu=2.2.4 pandas=0.25.3 -c conda-forge</code></li>
+      <li>Go to <code class="language-plaintext highlighter-rouge">File</code> &gt; <code class="language-plaintext highlighter-rouge">Preference</code> &gt; KNIME &gt; Conda, use <code class="language-plaintext highlighter-rouge">Browse</code> to set Conda installation derectory ; under Python Deep Learning, check Keras, check Conda, choose <code class="language-plaintext highlighter-rouge">knimedlcpu</code> for Keras Conda environment.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Install KNIME Geospatial Env:</p>
+
+    <ul>
+      <li>create a new Python environment named <code class="language-plaintext highlighter-rouge">geospatial_env</code> with all pacakgesgeospatial pextension with a GitHub <a href="file:https://raw.githubusercontent.com/spatial-data-lab/knime-geospatial-extension/main/knime_extension/geospatial_env.yml"><code class="language-plaintext highlighter-rouge">.yml</code> file</a></li>
+      <li>In Anaconda Prompt, run as administrator, and input:</li>
+      <li><code class="language-plaintext highlighter-rouge">conda env remove -n geospatial_env</code></li>
+      <li>for local file: <code class="language-plaintext highlighter-rouge">conda env create -f C:\DEV\GIT\EXTERNAL\knime-geospatial-extension\knime_extension\geospatial_env.yml</code></li>
+      <li>for online file: <code class="language-plaintext highlighter-rouge">conda env create -f https://raw.githubusercontent.com/spatial-data-lab/knime-geospatial-extension/main/knime_extension/geospatial_env.yml</code></li>
+    </ul>
+  </li>
+  <li>
+    <p>Install KNIME Geospatial Env:</p>
+
+    <ul>
+      <li>create a new Python environment named <code class="language-plaintext highlighter-rouge">geospatial_env</code> with all pacakgesgeospatial pextension with a GitHub <a href="file:https://raw.githubusercontent.com/spatial-data-lab/knime-geospatial-extension/main/knime_extension/geospatial_env.yml"><code class="language-plaintext highlighter-rouge">.yml</code> file</a></li>
+      <li>In Anaconda Prompt, run as administrator, and input:</li>
+      <li><code class="language-plaintext highlighter-rouge">conda env remove -n geospatial_env</code></li>
+      <li>for local file: <code class="language-plaintext highlighter-rouge">conda env create -f C:\DEV\GIT\EXTERNAL\knime-geospatial-extension\knime_extension\geospatial_env.yml</code></li>
+      <li>for online file: <code class="language-plaintext highlighter-rouge">conda env create -f https://raw.githubusercontent.com/spatial-data-lab/knime-geospatial-extension/main/knime_extension/geospatial_env.yml</code></li>
+    </ul>
+  </li>
+  <li>SSL: CERTIFICATE_VERIFY_FAILED in Installing Python Package in Anaconda:
+    <ul>
+      <li>if you encounter “connection error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed while installing python packages</li>
+      <li>In Anaconda Prompt, run <code class="language-plaintext highlighter-rouge">conda config --set ssl_verify false</code></li>
+    </ul>
+  </li>
+  <li>Handle Long File Path issue for failure in installing KNIME extension
+    <ul>
+      <li>if you encounter error while installing some specific extension,it might be related to the Long File Path issue in Windows OS</li>
+      <li>Go to the <a href="https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=powershell">website Source</a></li>
+      <li>copy the code, then input the code in the PowerShell console</li>
+    </ul>
+  </li>
+  <li>Create a pure Compactible Python environment
+    <ul>
+      <li>Create KNIME Python Environment named geoai： <code class="language-plaintext highlighter-rouge">conda create -n geoai python=3.9 knime-extension knime-python-base  -c conda-forge -c knime</code></li>
+      <li>Set geoai for KNIME Python Environment： KNIME&gt; File&gt;Preference&gt; Python, choose geoai for environment</li>
+    </ul>
+  </li>
+</ol>]]></content><author><name>UrbanGISer</name></author><category term="GAEK" /><category term="GAEK" /><category term="UIL" /><category term="KNIME" /><category term="SDL" /><category term="Geospatial" /><category term="Analytics" /><summary type="html"><![CDATA[Welcome to Geospaital Analytics in KNIME 101!]]></summary></entry><entry><title type="html">Welcome to UIL！</title><link href="/jekyll-theme-yat/uil/2022/11/28/welcome-to-UIL-article.html" rel="alternate" type="text/html" title="Welcome to UIL！" /><published>2022-11-28T00:00:00+00:00</published><updated>2022-11-28T00:00:00+00:00</updated><id>/jekyll-theme-yat/uil/2022/11/28/welcome-to-UIL-article</id><content type="html" xml:base="/jekyll-theme-yat/uil/2022/11/28/welcome-to-UIL-article.html"><![CDATA[<p>This is a GitHub website for  <code class="language-plaintext highlighter-rouge">Urban Innovation Lab</code>.</p>
+
+<h2 id="introducing-the-urban-innovation-lab-pioneering-sustainable-solutions-for-resilient-cities">Introducing the Urban Innovation Lab: Pioneering Sustainable Solutions for Resilient Cities</h2>
+
+<p>As the visionary leader of the Urban Innovation Lab, I am thrilled to present a transformative platform dedicated to driving sustainable advancements and fostering resilience in urban environments. At the core of this innovative initiative lies my vast experience as a Urban Planner and Lecturer at Wuhan University and my current role as a postdoctoral researcher at Harvard University, where I am actively developing the Geospatial Analytics extension for KNIME and utilizing workflow-based approaches in computational social science.</p>
+
+<p>Throughout my career, I have consistently been driven by the mission to create thriving, equitable, and resilient cities that can effectively address the complex challenges of the 21st century. From 2009 to 2018, my role as a Chief Planner at Huadu Urban Design Company allowed me to lead and contribute significantly to diverse urban design and development projects. This invaluable experience equipped me with expertise in quantitative analysis, urban management, and design thinking, leading to my recognition with planning prizes for my successful contributions.</p>
+
+<p>Building upon these achievements, my current work at Harvard University has propelled me towards cutting-edge research in the development of Geospatial Analytics and the utilization of workflow-based approaches in computational social science. This cutting-edge work has enabled me to explore new horizons in urban planning, as well as develop a deep understanding of sustainable and resilient urban development—attributes.</p>
+
+<p>The Urban Innovation Lab is a dynamic space where these diverse experiences converge, paving the way for pioneering research and transformative solutions. By bridging the gap between academia and real-world urban challenges, the lab seeks to tackle critical issues related to sustainability, climate resilience, social equity, and infrastructure design. Our overarching goal is to create actionable insights and evidence-based strategies that will empower cities worldwide to confront the pressing challenges of today and tomorrow.</p>
+
+<p>Through the integration of open GIS education and computational social science research, the Urban Innovation Lab strives to empower the next generation of urban leaders, equipping them with the tools to create meaningful change in their communities. Together, we will embark on a journey of exploration, innovation, and collaboration, as we shape the future of urban planning and design.</p>
+
+<p>I invite you to join us on this groundbreaking endeavor as we usher in a new era of urban innovation, resilience, and sustainability. Together, we will shape the cities of the future, making them not just thriving hubs of growth and development, but also havens of harmony, inclusivity, and ecological integrity.</p>
+
+<h2 id="collaboration">Collaboration</h2>
+
+<p>This website’s work is related to  <a href="https://projects.iq.harvard.edu/chinadatalab">Spatial Data Lab project</a>. For more info on KNIME extension, go to <a href="https://github.com/spatial-data-lab/knime-geospatial-extension">KNIME Geospatial Analytics</a>.</p>
+
+<p>Join our team as we embark on an exciting journey to develop a cutting-edge Python-based extension for KNIME. Together, we will shape the future of data analytics and unlock new possibilities for innovation and efficiency. Be a part of this transformative project and make your mark in the world of data science. Join us now!</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">UIL</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="nc">UIL</span><span class="p">(</span><span class="sh">"</span><span class="s">Lingbo</span><span class="sh">"</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">age</span><span class="p">)</span>
+</code></pre></div></div>]]></content><author><name>Lingbo</name></author><category term="UIL" /><category term="UIL" /><category term="KNIME" /><category term="SDL" /><category term="Geospatial" /><category term="Analytics" /><summary type="html"><![CDATA[This is a GitHub website for Urban Innovation Lab.]]></summary></entry><entry><title type="html">Open Urban Science！</title><link href="/jekyll-theme-yat/uil/2018/12/07/welcome-to-OUS.html" rel="alternate" type="text/html" title="Open Urban Science！" /><published>2018-12-07T00:00:00+00:00</published><updated>2018-12-07T00:00:00+00:00</updated><id>/jekyll-theme-yat/uil/2018/12/07/welcome-to-OUS</id><content type="html" xml:base="/jekyll-theme-yat/uil/2018/12/07/welcome-to-OUS.html"><![CDATA[<p>THis is a GitHub website for  <code class="language-plaintext highlighter-rouge">Open Urban Science</code>.</p>
+
+<p>Welcome to the realm of Open Urban Science, where innovation, collaboration, and data-driven insights converge to shape the cities of tomorrow. As a leading contributor in this field, I am thrilled to introduce you to this dynamic and interdisciplinary domain that seeks to address the challenges and opportunities of urban living through open access to data, tools, and knowledge.</p>
+
+<p>At the forefront of Open Urban Science, my work has been instrumental in developing and implementing advanced geospatial analytics and workflow-based approaches. Through my leadership, we are creating a Python-based extension for KNIME, a powerful platform that empowers researchers and practitioners to harness the full potential of data analytics in urban contexts.</p>
+
+<p>Our collaborative efforts aim to democratize urban data analysis, making it accessible to a diverse range of stakeholders, from policymakers and researchers to community members. By promoting openness and transparency, we aspire to foster inclusive urban planning, resilience, and sustainability.</p>
+
+<p>Joining the Open Urban Science community provides a unique opportunity to engage with like-minded experts and enthusiasts who share a common goal: to leverage data science and computational social science for the greater good. Together, we can unlock transformative insights, identify patterns, and craft evidence-based solutions to shape vibrant, livable, and resilient cities for generations to come.</p>
+
+<p>I invite you to be a part of this extraordinary movement where your contributions, ideas, and passion for urban innovation will not only drive cutting-edge research but also empower real-world impact. Together, let’s embrace the power of open collaboration and forge a brighter future for urban environments worldwide. Welcome to Open Urban Science!</p>]]></content><author><name>Lingbo</name></author><category term="UIL" /><category term="UIL" /><category term="KNIME" /><category term="SDL" /><category term="Geospatial" /><category term="Analytics" /><summary type="html"><![CDATA[THis is a GitHub website for Open Urban Science.]]></summary></entry><entry><title type="html">An exhibit of Markdown</title><link href="/jekyll-theme-yat/markdown/2018/12/05/an-exhibit-of-markdown.html" rel="alternate" type="text/html" title="An exhibit of Markdown" /><published>2018-12-05T00:00:00+00:00</published><updated>2018-12-05T00:00:00+00:00</updated><id>/jekyll-theme-yat/markdown/2018/12/05/an-exhibit-of-markdown</id><content type="html" xml:base="/jekyll-theme-yat/markdown/2018/12/05/an-exhibit-of-markdown.html"><![CDATA[<p>This note demonstrates some of what <a href="https://daringfireball.net/projects/markdown/">Markdown</a> is capable of doing.</p>
+
+<h2 id="an-exhibit-of-markdown">An exhibit of Markdown</h2>
+
+<p><em>Note: Feel free to play with this page. Unlike regular notes, this doesn’t automatically save itself.</em></p>
+
+<h2 id="basic-formatting">Basic formatting</h2>
+
+<p>Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no reason it should become anything else.</p>
+
+<p>Paragraphs must be separated by a blank line. Basic formatting of <em>italics</em> and <strong>bold</strong> is supported. This <em>can be <strong>nested</strong> like</em> so.</p>
+
+<h2 id="lists">Lists</h2>
+
+<h3 id="ordered-list">Ordered list</h3>
+
+<ol>
+  <li>Item 1</li>
+  <li>A second item</li>
+  <li>Number 3</li>
+  <li>Ⅳ</li>
+</ol>
+
+<p><em>Note: the fourth item uses the Unicode character for <a href="https://www.fileformat.info/info/unicode/char/2163/index.htm">Roman numeral four</a>.</em></p>
+
+<h3 id="unordered-list">Unordered list</h3>
+
+<ul>
+  <li>An item</li>
+  <li>Another item</li>
+  <li>Yet another item</li>
+  <li>And there’s more…</li>
+</ul>
+
+<h2 id="paragraph-modifiers">Paragraph modifiers</h2>
+
+<h3 id="code-block">Code block</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Code blocks are very useful for developers and other people who look at code or other things that are written in plain text. As you can see, it uses a fixed-width font.
+</code></pre></div></div>
+
+<p>You can also make <code class="language-plaintext highlighter-rouge">inline code</code> to add code into other things.</p>
+
+<h3 id="quote">Quote</h3>
+
+<blockquote>
+  <p>Here is a quote. What this is should be self explanatory. Quotes are automatically indented when they are used.</p>
+</blockquote>
+
+<h2 id="headings">Headings</h2>
+
+<p>There are six levels of headings. They correspond with the six levels of HTML headings. You’ve probably noticed them already in the page. Each level down uses one more hash character.</p>
+
+<h3 id="headings-can-also-contain-formatting">Headings <em>can</em> also contain <strong>formatting</strong></h3>
+
+<h3 id="they-can-even-contain-inline-code">They can even contain <code class="language-plaintext highlighter-rouge">inline code</code></h3>
+
+<p>Of course, demonstrating what headings look like messes up the structure of the page.</p>
+
+<p>I don’t recommend using more than three or four levels of headings here, because, when you’re smallest heading isn’t too small, and you’re largest heading isn’t too big, and you want each size up to look noticeably larger and more important, there there are only so many sizes that you can use.</p>
+
+<h2 id="urls">URLs</h2>
+
+<p>URLs can be made in a handful of ways:</p>
+
+<ul>
+  <li>A named link to <a href="https://www.markitdown.net/">MarkItDown</a>. The easiest way to do these is to select what you want to make a link and hit <code class="language-plaintext highlighter-rouge">Ctrl+L</code>.</li>
+  <li>Another named link to <a href="https://www.markitdown.net/">MarkItDown</a></li>
+  <li>Sometimes you just want a URL like <a href="https://www.markitdown.net/">https://www.markitdown.net/</a>.</li>
+</ul>
+
+<h2 id="horizontal-rule">Horizontal rule</h2>
+
+<p>A horizontal rule is a line that goes across the middle of the page.</p>
+
+<hr />
+
+<p>It’s sometimes handy for breaking things up.</p>
+
+<h2 id="images">Images</h2>
+
+<p>Markdown can also contain images. I’ll need to add something here sometime.</p>
+
+<h2 id="finally">Finally</h2>
+
+<p>There’s actually a lot more to Markdown than this. See the official <a href="https://daringfireball.net/projects/markdown/basics">introduction</a> and <a href="https://daringfireball.net/projects/markdown/syntax">syntax</a> for more information. However, be aware that this is not using the official implementation, and this might work subtly differently in some of the little things.</p>]]></content><author><name>UrbanGISer</name></author><category term="markdown" /><category term="example" /><category term="markdown" /><summary type="html"><![CDATA[This note demonstrates some of what Markdown is capable of doing.]]></summary></entry><entry><title type="html">Video example</title><link href="/jekyll-theme-yat/example/2017/12/18/video-example.html" rel="alternate" type="text/html" title="Video example" /><published>2017-12-18T00:00:00+00:00</published><updated>2017-12-18T00:00:00+00:00</updated><id>/jekyll-theme-yat/example/2017/12/18/video-example</id><content type="html" xml:base="/jekyll-theme-yat/example/2017/12/18/video-example.html"><![CDATA[<h2 id="geospatial-analytics-extension-for-knime">Geospatial Analytics Extension for KNIME</h2>
+<p>Some of you know that we occasionally play for weddings. As you can imagine, we get a LOT of requests for Canon in D, and we discovered that there were no good arrangements available anywhere for piano and cello! Hard to believe given its popularity. So we decided to make our own! We tried to stick as closely to the original as possible (which was written for three violins and basso continuo), and we performed it <em>not</em> at a snail’s pace so the bride can actually make it down the aisle without putting everyone to sleep. 🙊(Yeah, we said it! Nobody likes a slow processional!) Also, the number one complaint about this piece from cellists is always how booooring it is to play because they literally have to play the same 8 bass notes over and over for the entire piece. Problem solved with this arrangement because the cello never has to play the bass! 🙌(The piano does, but we get lots of other fun stuff too so it’s ok!) So for all you musicians out there playing weddings, we hope you enjoy playing this arrangement a little more than the ones you were used to…You can get it from www.musicnotes.com. 😊Be sure to let us know in the comments if you do!</p>
+
+<p><img src="https://youtu.be/-jbvXQec61A" alt="" /></p>
+
+<h2 id="this-is-the-poster-image">This is the poster image</h2>
+<p>In modern browsers, adding a video to your page is as easy as adding an image. No longer do you need to deal with special plug-ins or require crazy markup, you can do it with a single element.
+<img src="//www.html5rocks.com/en/tutorials/video/basics/devstories.webm" alt="video" /></p>]]></content><author><name>UrbanGISer</name></author><category term="example" /><category term="video" /><summary type="html"><![CDATA[Geospatial Analytics Extension for KNIME Some of you know that we occasionally play for weddings. As you can imagine, we get a LOT of requests for Canon in D, and we discovered that there were no good arrangements available anywhere for piano and cello! Hard to believe given its popularity. So we decided to make our own! We tried to stick as closely to the original as possible (which was written for three violins and basso continuo), and we performed it not at a snail’s pace so the bride can actually make it down the aisle without putting everyone to sleep. 🙊(Yeah, we said it! Nobody likes a slow processional!) Also, the number one complaint about this piece from cellists is always how booooring it is to play because they literally have to play the same 8 bass notes over and over for the entire piece. Problem solved with this arrangement because the cello never has to play the bass! 🙌(The piano does, but we get lots of other fun stuff too so it’s ok!) So for all you musicians out there playing weddings, we hope you enjoy playing this arrangement a little more than the ones you were used to…You can get it from www.musicnotes.com. 😊Be sure to let us know in the comments if you do!]]></summary></entry><entry><title type="html">Table example</title><link href="/jekyll-theme-yat/example/2017/12/15/table-example.html" rel="alternate" type="text/html" title="Table example" /><published>2017-12-15T00:00:00+00:00</published><updated>2017-12-15T00:00:00+00:00</updated><id>/jekyll-theme-yat/example/2017/12/15/table-example</id><content type="html" xml:base="/jekyll-theme-yat/example/2017/12/15/table-example.html"><![CDATA[<h2 id="table-example-as-below">Table example as below</h2>
+
+<p><strong>For now, these extended features are provided:</strong></p>
+
+<ul>
+  <li>Cells spanning multiple columns</li>
+  <li>Cells spanning multiple rows</li>
+  <li>Cells text align separately</li>
+  <li>Table header not required</li>
+  <li>Grouped table header rows or data rows</li>
+</ul>
+
+<h3 id="rowspan-and-colspan">Rowspan and Colspan</h3>
+<p>^^ in a cell indicates it should be merged with the cell above.<br />
+This feature is contributed by <a href="https://github.com/pmccloghrylaing">pmccloghrylaing</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">Stage</th>
+      <th style="text-align: right">Direct Products</th>
+      <th style="text-align: right">ATP Yields</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">Glycolysis</td>
+      <td style="text-align: right">2 ATP                   |</td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">^^</td>
+      <td style="text-align: right">2 NADH</td>
+      <td style="text-align: right">3–5 ATP</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Pyruvaye oxidation</td>
+      <td style="text-align: right">2 NADH</td>
+      <td style="text-align: right">5 ATP</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Citric acid cycle</td>
+      <td style="text-align: right">2 ATP           |</td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">^^</td>
+      <td style="text-align: right">6 NADH</td>
+      <td style="text-align: right">15 ATP</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">^^</td>
+      <td style="text-align: right">2 FADH</td>
+      <td style="text-align: right">3 ATP</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">30–32 ATP                         ||</td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>[ Net ATP yields per hexose]</p>
+
+<h3 id="multiline">Multiline</h3>
+<p>A backslash at end to join cell contents with the following lines.<br />
+This feature is contributed by <a href="https://github.com/Lucas-C">Lucas-C</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">:     Easy Multiline     :||</th>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange  \</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange  \</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange  \</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="headerless">Headerless</h3>
+<p>Table header can be eliminated.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>♜</td>
+      <td> </td>
+      <td>♝</td>
+      <td>♛</td>
+      <td>♚</td>
+      <td>♝</td>
+      <td>♞</td>
+      <td>♜</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>♟</td>
+      <td>♟</td>
+      <td>♟</td>
+      <td> </td>
+      <td>♟</td>
+      <td>♟</td>
+      <td>♟</td>
+    </tr>
+    <tr>
+      <td>♟</td>
+      <td> </td>
+      <td>♞</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>♗</td>
+      <td> </td>
+      <td> </td>
+      <td>♟</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>♙</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>♘</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>♙</td>
+      <td>♙</td>
+      <td>♙</td>
+      <td>♙</td>
+      <td> </td>
+      <td>♙</td>
+      <td>♙</td>
+      <td>♙</td>
+    </tr>
+    <tr>
+      <td>♖</td>
+      <td>♘</td>
+      <td>♗</td>
+      <td>♕</td>
+      <td>♔</td>
+      <td> </td>
+      <td> </td>
+      <td>♖</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|:     Fruits <span class="se">\|\|</span> Food           :|||
+|:-------- |:-------- |:------------ |
+| Apple    |: Apple  :|    Apple     <span class="err">\</span>
+| Banana   |  Banana  |    Banana    <span class="err">\</span>
+| Orange   |  Orange  |    Orange    |
+|:   Rowspan is 5   :||:  How's it? :|
+|^^   A. Peach       ||^^ 1. Fine    |
+|^^   B. Orange      ||^^ 2. Bad  $I = <span class="se">\i</span>nt <span class="se">\r</span>ho R^{2} dV$     |
+|^^   C. Banana      ||   It's OK! !<span class="p">[</span><span class="nv">example image</span><span class="p">][</span><span class="ss">my-image</span><span class="p">]</span>  |
+</code></pre></div></div>
+
+<h3 id="text-alignment">Text Alignment</h3>
+<p>Table cell can be set alignment separately.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">\:Fruits         |</th>
+      <th style="text-align: left">Food   :</th>
+      <th style="text-align: left"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">Fruits\::        |</th>
+      <th style="text-align: left"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">: \:Fruits       :|</th>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">:       Food     :|</th>
+      <th style="text-align: left"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Orange</td>
+      <td style="text-align: left">:   Strawberry    :</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Apple  &amp;  Banana |</td>
+      <td style="text-align: left">^^</td>
+      <td style="text-align: left">Peach        :|</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>: \:Fruits       :|</td>
+      <td> </td>
+      <td>:       Food     :|</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Apple</td>
+      <td>Banana</td>
+      <td>Orange</td>
+      <td>:   Strawberry    :</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">:     Fruits || Food           :||</th>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Apple</td>
+      <td style="text-align: left">: Apple  :</td>
+      <td style="text-align: left">Apple     \</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Banana</td>
+      <td style="text-align: left">Banana    \</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Orange</td>
+      <td style="text-align: left">Orange</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">:   Rowspan is 5   :|</td>
+      <td style="text-align: left">:  How’s it? :</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">^^   A. Peach       |</td>
+      <td style="text-align: left">^^ 1. Fine</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">^^   B. Orange      |</td>
+      <td style="text-align: left">^^ 2. Bad  $I = \int \rho R^{2} dV$</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">^^   C. Banana      |</td>
+      <td style="text-align: left">It’s OK! ![example image](http://www.unexpected-vortices.com/sw/rippledoc/example-image.jpg "An exemplary image")</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>UrbanGISer</name></author><category term="example" /><category term="table" /><summary type="html"><![CDATA[Table example as below]]></summary></entry><entry><title type="html">Quick markdown example</title><link href="/jekyll-theme-yat/markdown/2017/06/10/quick-mardown-example.html" rel="alternate" type="text/html" title="Quick markdown example" /><published>2017-06-10T00:00:00+00:00</published><updated>2017-06-10T00:00:00+00:00</updated><id>/jekyll-theme-yat/markdown/2017/06/10/quick-mardown-example</id><content type="html" xml:base="/jekyll-theme-yat/markdown/2017/06/10/quick-mardown-example.html"><![CDATA[<p>Paragraphs are separated by a blank line.</p>
+
+<p>2nd paragraph. <em>Italic</em>, <strong>bold</strong>, and <code class="language-plaintext highlighter-rouge">monospace</code>. Itemized lists
+look like:</p>
+
+<ul>
+  <li>this one</li>
+  <li>that one</li>
+  <li>the other one</li>
+</ul>
+
+<p>Note that — not considering the asterisk — the actual text
+content starts at 4-columns in.</p>
+
+<blockquote>
+  <p>Block quotes are
+written like so.</p>
+
+  <p>They can span multiple paragraphs,
+if you like.</p>
+</blockquote>
+
+<p>Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., “it’s all
+in chapters 12–14”). Three dots … will be converted to an ellipsis.
+Unicode is supported. ☺</p>
+
+<h2 id="an-h2-header">An h2 header</h2>
+
+<p>Here’s a numbered list:</p>
+
+<ol>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
+</ol>
+
+<p>Note again how the actual text starts at 4 columns in (4 characters
+from the left side). Here’s a code sample:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Let me re-iterate ...
+for i in 1 .. 10 { do-something(i) }
+</code></pre></div></div>
+
+<p>As you probably guessed, indented 4 spaces. By the way, instead of
+indenting the block, you can use delimited blocks, if you like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>define foobar() {
+    print "Welcome to flavor country!";
+}
+</code></pre></div></div>
+
+<p>(which makes copying &amp; pasting easier). You can optionally mark the
+delimited block for Pandoc to syntax highlight it:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">time</span>
+<span class="c1"># Quick, count to ten!
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="c1"># (but not *too* quick)
+</span>    <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="an-h3-header">An h3 header</h3>
+
+<p>Now a nested list:</p>
+
+<ol>
+  <li>
+    <p>First, get these ingredients:</p>
+
+    <ul>
+      <li>carrots</li>
+      <li>celery</li>
+      <li>lentils</li>
+    </ul>
+  </li>
+  <li>
+    <p>Boil some water.</p>
+  </li>
+  <li>
+    <p>Dump everything in the pot and follow
+this algorithm:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find wooden spoon
+uncover pot
+stir
+cover pot
+balance wooden spoon precariously on pot handle
+wait 10 minutes
+goto first step (or shut off burner when done)
+</code></pre></div>    </div>
+
+    <p>Do not bump wooden spoon or it will fall.</p>
+  </li>
+</ol>
+
+<p>Notice again how text always lines up on 4-space indents (including
+that last line which continues item 3 above).</p>
+
+<p>Here’s a link to <a href="http://foo.bar">a website</a>, to a <a href="local-doc.html">local
+doc</a>, and to a <a href="#an-h2-header">section heading in the current
+doc</a>. Here’s a footnote <sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.</p>
+
+<p>Tables can look like this:</p>
+
+<p>Name           Size  Material      Color
+————- —–  ————  ————
+All Business      9  leather       brown
+Roundabout       10  hemp canvas   natural
+Cinderella       11  glass         transparent</p>
+
+<p>Table: Shoes sizes, materials, and colors.</p>
+
+<p>(The above is the caption for the table.) Pandoc also supports
+multi-line tables:</p>
+
+<hr />
+<p>Keyword   Text
+——–  ———————–
+red       Sunsets, apples, and
+          other red or reddish
+          things.</p>
+
+<p>green     Leaves, grass, frogs
+          and other things it’s
+          not easy being.
+——–  ———————–</p>
+
+<p>A horizontal rule follows.</p>
+
+<hr />
+
+<p>Here’s a definition list:</p>
+
+<dl>
+  <dt>apples</dt>
+  <dd>Good for making applesauce.</dd>
+  <dt>oranges</dt>
+  <dd>Citrus!</dd>
+  <dt>tomatoes</dt>
+  <dd>There’s no “e” in tomatoe.</dd>
+</dl>
+
+<p>Again, text is indented 4 spaces. (Put a blank line between each
+term and  its definition to spread things out more.)</p>
+
+<p>Here’s a “line block” (note how whitespace is honored):</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Line one</td>
+    </tr>
+    <tr>
+      <td>Line too</td>
+    </tr>
+    <tr>
+      <td>Line tree</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>and images can be specified like so:</p>
+
+<p><img src="https://user-images.githubusercontent.com/9413601/123900693-1d9ebd00-d99c-11eb-8e9e-cf7879187606.png" alt="example image" title="An exemplary image" /></p>
+
+<p>Inline math equation: $\omega = d\phi / dt$. Display
+math should get its own line like so:</p>
+
+<p>$$I = \int \rho R^{2} dV$$</p>
+
+<p>And note that you can backslash-escape any punctuation characters
+which you wish to be displayed literally, ex.: `foo`, *bar*, etc.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Some footnote text. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>UrbanGISer</name></author><category term="markdown" /><category term="example" /><summary type="html"><![CDATA[Paragraphs are separated by a blank line.]]></summary></entry><entry><title type="html">This post demonstrates post content styles</title><link href="/jekyll-theme-yat/junk/2017/05/20/this-post-demonstrates-post-content-styles.html" rel="alternate" type="text/html" title="This post demonstrates post content styles" /><published>2017-05-20T00:00:00+00:00</published><updated>2017-05-20T00:00:00+00:00</updated><id>/jekyll-theme-yat/junk/2017/05/20/this-post-demonstrates-post-content-styles</id><content type="html" xml:base="/jekyll-theme-yat/junk/2017/05/20/this-post-demonstrates-post-content-styles.html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.</p>
+
+<h2 id="some-great-heading-h2">Some great heading (h2)</h2>
+
+<p>Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu.</p>
+
+<p>Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+
+<h2 id="another-great-heading-h2">Another great heading (h2)</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.</p>
+
+<h3 id="some-great-subheading-h3">Some great subheading (h3)</h3>
+
+<p>Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum.</p>
+
+<p>Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.</p>
+
+<h3 id="some-great-subheading-h3-1">Some great subheading (h3)</h3>
+
+<p>Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+
+<blockquote>
+  <p>This quote will change your life. It will reveal the secrets of the universe, and all the wonders of humanity. Don’t misuse it.</p>
+</blockquote>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt.</p>
+
+<h3 id="some-great-subheading-h3-2">Some great subheading (h3)</h3>
+
+<p>Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span> <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Hello, World!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.</p>
+
+<h4 id="you-might-want-a-sub-subheading-h4">You might want a sub-subheading (h4)</h4>
+
+<p>In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.</p>
+
+<p>In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.</p>
+
+<h4 id="but-its-probably-overkill-h4">But it’s probably overkill (h4)</h4>
+
+<p>In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.</p>
+
+<h3 id="oh-hai-an-unordered-list">Oh hai, an unordered list!!</h3>
+
+<p>In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.</p>
+
+<ul>
+  <li>First item, yo</li>
+  <li>Second item, dawg</li>
+  <li>Third item, what what?!</li>
+  <li>Fourth item, fo sheezy my neezy</li>
+</ul>
+
+<h3 id="oh-hai-an-ordered-list">Oh hai, an ordered list!!</h3>
+
+<p>In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.</p>
+
+<ol>
+  <li>First item, yo</li>
+  <li>Second item, dawg</li>
+  <li>Third item, what what?!</li>
+  <li>Fourth item, fo sheezy my neezy</li>
+</ol>
+
+<h2 id="headings-are-cool-h2">Headings are cool! (h2)</h2>
+
+<p>Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+
+<p>Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+
+<p>Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.</p>
+
+<h3 id="tables">Tables</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title 1</th>
+      <th>Title 2</th>
+      <th>Title 3</th>
+      <th>Title 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>lorem</td>
+      <td>lorem ipsum</td>
+      <td>lorem ipsum dolor</td>
+      <td>lorem ipsum dolor sit</td>
+    </tr>
+    <tr>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+    </tr>
+    <tr>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+    </tr>
+    <tr>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title 1</th>
+      <th>Title 2</th>
+      <th>Title 3</th>
+      <th>Title 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>lorem</td>
+      <td>lorem ipsum</td>
+      <td>lorem ipsum dolor</td>
+      <td>lorem ipsum dolor sit</td>
+    </tr>
+    <tr>
+      <td>lorem ipsum dolor sit amet</td>
+      <td>lorem ipsum dolor sit amet consectetur</td>
+      <td>lorem ipsum dolor sit amet</td>
+      <td>lorem ipsum dolor sit</td>
+    </tr>
+    <tr>
+      <td>lorem ipsum dolor</td>
+      <td>lorem ipsum</td>
+      <td>lorem</td>
+      <td>lorem ipsum</td>
+    </tr>
+    <tr>
+      <td>lorem ipsum dolor</td>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit amet</td>
+      <td>lorem ipsum dolor sit amet consectetur</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Bart Simpson</name></author><category term="junk" /><summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.]]></summary></entry><entry><title type="html">Markdown Simple Test 2</title><link href="/jekyll-theme-yat/markdown/2016/01/01/another-test-markdown.html" rel="alternate" type="text/html" title="Markdown Simple Test 2" /><published>2016-01-01T00:00:00+00:00</published><updated>2016-01-01T00:00:00+00:00</updated><id>/jekyll-theme-yat/markdown/2016/01/01/another-test-markdown</id><content type="html" xml:base="/jekyll-theme-yat/markdown/2016/01/01/another-test-markdown.html"><![CDATA[<p>Put the math expression within <span>$</span>…$:</p>
+
+<p>\(\LaTeX{}\)</p>
+
+<p>$\Pi$</p>
+
+<p>$ a * b = c ^ b $</p>
+
+<p>$ 2^{\frac{n-1}{3}} $</p>
+
+<p>$ \int_a^b f(x)\,dx. $</p>
+
+<p>\( \int_a^b f(x)\,dx. \)</p>
+
+<p>$$
+\begin{cases}
+\text{if true}\ foo <br />
+\text{if false}\ bar
+\end{cases}
+$$</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$ \rho {\rm{FOD}} = \sum\limits{\sigma ,i} {(\delta _1 - \delta _2 n_i^\sigma )</td>
+      <td>\phi _i^\sigma ({\bf{r}})</td>
+      <td>^2} $</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$$ \rho {\rm{FOD}} = \sum\limits{\sigma ,i} {(\delta _1 - \delta _2 n_i^\sigma )</td>
+      <td>\phi _i^\sigma ({\bf{r}})</td>
+      <td>^2} $$</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Here is a liquid filter.</p>
+
+<p>`escape inline code`<br />
+<code class="language-plaintext highlighter-rouge">inline code</code><br />
+Here is a <strong>capture block</strong>.</p>
+
+<p>100 / 3 = 33</p>
+
+<p>:+1:
+:bolivia:</p>
+
+<p>⁣1. 21312<br />
+⁣2. 21312<br />
+⁣4. 4214</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+</pre></td><td class="code"><pre><span class="kn">import</span> <span class="n">networkx</span> <span class="k">as</span> <span class="n">nx</span>
+<span class="kn">from</span> <span class="n">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="n">diagrams</span> <span class="o">=</span> <span class="nf">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="n">particle_counts</span> <span class="o">=</span> <span class="nf">defaultdict</span><span class="p">(</span><span class="n">Counter</span><span class="p">)</span>
+
+<span class="nf">for </span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">neighbors</span> <span class="ow">in</span> <span class="n">common_neighbors</span><span class="p">.</span><span class="nf">items</span><span class="p">():</span>
+    <span class="c1"># Build up the graph of connections between the
+</span>    <span class="c1"># common neighbors of a and b.
+</span>    <span class="n">g</span> <span class="o">=</span> <span class="n">nx</span><span class="p">.</span><span class="nc">Graph</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">neighbors</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nf">set</span><span class="p">(</span><span class="n">nl</span><span class="p">.</span><span class="n">point_indices</span><span class="p">[</span>
+            <span class="n">nl</span><span class="p">.</span><span class="n">query_point_indices</span> <span class="o">==</span> <span class="n">i</span><span class="p">]).</span><span class="nf">intersection</span><span class="p">(</span><span class="n">neighbors</span><span class="p">):</span>
+            <span class="n">g</span><span class="p">.</span><span class="nf">add_edge</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+
+    <span class="c1"># Define the identifiers for a CNA diagram:
+</span>    <span class="c1"># The first integer is 1 if the particles are bonded, otherwise 2
+</span>    <span class="c1"># The second integer is the number of shared neighbors
+</span>    <span class="c1"># The third integer is the number of bonds among shared neighbors
+</span>    <span class="c1"># The fourth integer is an index, just to ensure uniqueness of diagrams
+</span>    <span class="n">diagram_type</span> <span class="o">=</span> <span class="mi">2</span><span class="o">-</span><span class="nf">int</span><span class="p">(</span><span class="n">b</span> <span class="ow">in</span> <span class="n">nl</span><span class="p">.</span><span class="n">point_indices</span><span class="p">[</span><span class="n">nl</span><span class="p">.</span><span class="n">query_point_indices</span> <span class="o">==</span> <span class="n">a</span><span class="p">])</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">diagram_type</span><span class="p">,</span> <span class="nf">len</span><span class="p">(</span><span class="n">neighbors</span><span class="p">),</span> <span class="n">g</span><span class="p">.</span><span class="nf">number_of_edges</span><span class="p">())</span>
+    <span class="c1"># If we've seen any neighborhood graphs with this signature,
+</span>    <span class="c1"># we explicitly check if the two graphs are identical to
+</span>    <span class="c1"># determine whether to save this one. Otherwise, we add
+</span>    <span class="c1"># the new graph immediately.
+</span>    <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">diagrams</span><span class="p">:</span>
+        <span class="n">isomorphs</span> <span class="o">=</span> <span class="p">[</span><span class="n">nx</span><span class="p">.</span><span class="nf">is_isomorphic</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">diagrams</span><span class="p">[</span><span class="n">key</span><span class="p">]]</span>
+        <span class="k">if</span> <span class="nf">any</span><span class="p">(</span><span class="n">isomorphs</span><span class="p">):</span>
+            <span class="n">idx</span> <span class="o">=</span> <span class="n">isomorphs</span><span class="p">.</span><span class="nf">index</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">diagrams</span><span class="p">[</span><span class="n">key</span><span class="p">].</span><span class="nf">append</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+            <span class="n">idx</span> <span class="o">=</span> <span class="n">diagrams</span><span class="p">[</span><span class="n">key</span><span class="p">].</span><span class="nf">index</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">diagrams</span><span class="p">[</span><span class="n">key</span><span class="p">].</span><span class="nf">append</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="n">diagrams</span><span class="p">[</span><span class="n">key</span><span class="p">].</span><span class="nf">index</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+    <span class="n">cna_signature</span> <span class="o">=</span> <span class="n">key</span> <span class="o">+</span> <span class="p">(</span><span class="n">idx</span><span class="p">,)</span>
+    <span class="n">particle_counts</span><span class="p">[</span><span class="n">a</span><span class="p">].</span><span class="nf">update</span><span class="p">([</span><span class="n">cna_signature</span><span class="p">])</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">insert</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">key</span> <span class="o">==</span> <span class="sc">'\0'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">finish</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">idx</span> <span class="o">=</span> <span class="o">*</span><span class="n">key</span> <span class="o">-</span> <span class="sc">'A'</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">next</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+            <span class="n">next</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Trie</span><span class="p">();</span>
+        <span class="n">next</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">(</span><span class="n">key</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">p</span> <span class="s2">":+1:"</span>
+</code></pre></div></div>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gi">+        'user_exists' =&gt; 'SELECT EXISTS(SELECT 1 FROM table WHERE username = (:username || \'@sample'))',
++        'get_users' =&gt; 'SELECT split_part(username, \'@\', 1) FROM table WHERE (username ILIKE :search) OR (name ILIKE :search)',
++        'get_password_hash_for_user' =&gt; 'SELECT split_part(password, \'{CRYPT}\', 2) FROM table WHERE username = (:username || \'@sample\')',
++        'set_password_hash_for_user' =&gt; 'UPDATE table SET password =  \'{CRYPT}\' || :new_password_hash WHERE username = (:username || \'@sample\')',
+</span></code></pre></div></div>
+
+<p>Reload the Nginx:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>nginx <span class="nt">-s</span> reload
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>:</th>
+      <th>:                  :</th>
+      <th>: $$O_3 + C_2H_2 \rightarrow $$         :||</th>
+      <th>:  $$O_3 + C_2H_4 \rightarrow $$ :||</th>
+      <th>:       :</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+    <tr>
+      <th>:  ^^ Method            :</th>
+      <th>^^ $$\lambda^a$$</th>
+      <th>vdW</th>
+      <th>TS</th>
+      <th>cycloadd.</th>
+      <th>vdW</th>
+      <th>TS</th>
+      <th>cycloadd.</th>
+      <th>^^ MAE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$$\lambda$$-tPBE</td>
+      <td>0.20</td>
+      <td>-0.40</td>
+      <td>7.69</td>
+      <td>-68.00</td>
+      <td>-1.86</td>
+      <td>4.87</td>
+      <td>-57.57</td>
+      <td>1.29</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>MC1H-PBE $$^b$$</td>
+      <td>0.25</td>
+      <td>-1.08</td>
+      <td>3.66</td>
+      <td>-70.97</td>
+      <td>-1.25</td>
+      <td>0.13</td>
+      <td>-61.26</td>
+      <td>3.35</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Reference values $$^c$$</td>
+      <td>———</td>
+      <td>-1.90</td>
+      <td>7.74</td>
+      <td>-63.80</td>
+      <td>-1.94</td>
+      <td>3.37</td>
+      <td>-57.15</td>
+      <td>———</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>$$^a$$ The optimal mixing parameter.$$~$$ $$^b$$ From Ref. .$$~$$  $$^c$$ Best estimates from Ref. . |||||||</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tfoot>
+</table>
+
+<table class="custom-table">
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>spancell1     |</td>
+      <td>spancell2  |</td>
+      <td>cell</td>
+      <td>spancell3 |</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>^^ spancell1   |</td>
+      <td>spancell2  |</td>
+      <td>cell</td>
+      <td>spancell3 |</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+|:-----:|:-----:|:-----:|:-----:|
+| \(0,0) | \(0,1) | \(0,2) | \(0,3) |
+|     \(1,0)    \|| ^^    | \(1,3) |
+</script>
+
+<table>
+  <tbody>
+    <tr>
+      <td>(0,0)</td>
+      <td>(0,1)</td>
+      <td>(0,2)</td>
+      <td>(0,3)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>(1,0)    |</td>
+      <td>^^</td>
+      <td>(1,3)</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>(0,0)</td>
+      <td>(0,1)</td>
+      <td>(0,2)</td>
+      <td>(0,3)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>(1,0)           ||</td>
+      <td>(1,3)       |</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>(0,0)</td>
+      <td>(0,1)</td>
+      <td>(0,2)</td>
+      <td>(0,3)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>(1,0)           ||</td>
+      <td>^^</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>(0,0)</td>
+      <td>(0,1)</td>
+      <td>(0,2)</td>
+      <td>(0,3)</td>
+      <td>\</td>
+    </tr>
+    <tr>
+      <td>(1,0)           ||</td>
+      <td>^^</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="table">Table</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">Stage</th>
+      <th style="text-align: right">Direct Products</th>
+      <th style="text-align: right">ATP Yields</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">Glycolysis</td>
+      <td style="text-align: right">2 ATP                   |</td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">^^</td>
+      <td style="text-align: right">2 NADH</td>
+      <td style="text-align: right">3–5 ATP</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Pyruvaye oxidation</td>
+      <td style="text-align: right">2 NADH</td>
+      <td style="text-align: right">5 ATP</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Citric acid cycle</td>
+      <td style="text-align: right">2 ATP           |</td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">^^</td>
+      <td style="text-align: right">6 NADH</td>
+      <td style="text-align: right">15 ATP</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">^^</td>
+      <td style="text-align: right">2 FADH</td>
+      <td style="text-align: right">3 ATP</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">30–32 ATP  ||</td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>:             Here’s a Inline Attribute Lists example                 :|||</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:       :</td>
+      <td>:  &lt;div style="color: red;"&gt; &lt; Normal HTML Block &gt; &lt;/div&gt; :||</td>
+    </tr>
+    <tr>
+      <td>^^</td>
+      <td>Red    {: .cls style="background: orange" }                ||</td>
+    </tr>
+    <tr>
+      <td>^^ IALs</td>
+      <td>Green  {: #id style="background: green; color: white" }    ||</td>
+    </tr>
+    <tr>
+      <td>^^</td>
+      <td>Blue   {: style="background: blue; color: white" }         ||</td>
+    </tr>
+    <tr>
+      <td>^^</td>
+      <td>Black  {: color-style font-style}                          ||</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Heading</th>
+      <th>Column 1</th>
+      <th>Column 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Row 1</td>
+      <td>Apple<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>(Footnote)</td>
+      <td>[Youtube (Home)](https://www.youtube.com)</td>
+    </tr>
+    <tr>
+      <td>Row 2</td>
+      <td>Banana</td>
+      <td>[Github](https://www.github.com)</td>
+    </tr>
+    <tr>
+      <td>Row 3 (merged)</td>
+      <td>Blueberry</td>
+      <td>[Google](https://www.google.com) *****  [Github](https://www.github.com)</td>
+    </tr>
+    <tr>
+      <td>^^</td>
+      <td>[Plum](https://example.com)</td>
+      <td>Raspberry ![example](https://jekyllrb.com/img/octojekyll.png "An exemplary image")</td>
+    </tr>
+    <tr>
+      <td>Row 4</td>
+      <td><a href="https://www.google.com">https://www.google.com</a></td>
+      <td>[test](https://www.google.com){:target="_blank"}</td>
+    </tr>
+    <tr>
+      <td>^^</td>
+      <td>^^ <a href="https://www.youtube.com">https://www.youtube.com</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Row 5</td>
+      <td><a href="https://www.google.com">https://www.google.com</a>                                  |</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://www.google.com">https://www.google.com</a></p>
+
+<p>Not in table: <code class="language-plaintext highlighter-rouge">&lt;Mail Gateway&gt;</code></p>
+
+<p>In table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Decision Point</th>
+      <th>Design Decision</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Authoritative DNS MX Record</td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;Mail Gateway&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>9 * 9</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1 * 1 = 1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1 * 2 = 2</td>
+      <td>2 * 2 = 4</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1 * 3 = 3</td>
+      <td>2 * 3 = 6</td>
+      <td>3 * 3 = 9</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1 * 3 = 3</td>
+      <td>2 * 3 = 6</td>
+      <td>3 * 4 = 12</td>
+      <td>4 * 4 = 16</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="emoji">Emoji</h2>
+<p>:+1:</p>
+
+<h2 id="mathjax">Mathjax</h2>
+
+<p>$\LaTeX{}$</p>
+
+<h2 id="plantuml">PlantUML</h2>
+
+<p><img class="plantuml" src="http://www.plantuml.com/plantuml/svg/~h407374617274756d6c0a426f62202d3e20416c696365203a2068656c6c6f0a40656e64756d6c" /></p>
+
+<h2 id="mermaid">Mermaid</h2>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbmNvbmN1cnJlbnQuZnV0dXJlcyAtLS0-fCBvbiB0b3Agb2YgfCB0aHJlYWRpbmdcbmNvbmN1cnJlbnQuZnV0dXJlcyAtLS0-fCBvbiB0b3Agb2YgfCBtdWx0aXByb2Nlc3NpbmdcbnRocmVhZGluZyAtLS0-fCBvbiB0b3Agb2YgfCBcXF90aHJlYWRcbmNsaWNrIGNvbmN1cnJlbnQuZnV0dXJlcyBcImh0dHBzOi8vZG9jcy5weXRob24ub3JnLzMuOS9saWJyYXJ5L2NvbmN1cnJlbnQuZnV0dXJlcy5odG1sXCIgX2JsYW5rIiwibWVybWFpZCI6bnVsbH0" /></p>
+
+<h2 id="video">Video</h2>
+
+<p><img src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" alt="Flower" /></p>
+
+<p><img src="//www.youtube.com/watch?v=Ptk_1Dc2iPY" alt="" /></p>
+
+<p><img src="https://avatars3.githubusercontent.com/hubot?v=3&amp;s=40" alt="" /></p>
+
+<p><a href="//www.youtube.com/watch?v=Ptk_1Dc2iPY">[video link]</a></p>
+
+<h2 id="audio">Audio</h2>
+
+<p><a href="https://hpr.dogphilosophy.net/test/">HTML5 Audio Formats Test</a></p>
+
+<p>Opus Audio (“.opus”):</p>
+
+<p><img src="https://hpr.dogphilosophy.net/test/opus.opus" alt="" /></p>
+
+<p>“MP3” file (“.mp3”) :</p>
+
+<p><img src="https://hpr.dogphilosophy.net/test/mp3.mp3" alt="" /></p>
+
+<p>WebM Audio (“.weba”):</p>
+
+<p><img src="https://hpr.dogphilosophy.net/test/weba.weba" alt="" /></p>
+
+<p>WebMv2 Audio (“.webm”):</p>
+
+<p><img src="https://hpr.dogphilosophy.net/test/webmv2.webm" alt="" /></p>
+
+<p>Ogg Vorbis (“.ogg”) :</p>
+
+<p><img src="https://hpr.dogphilosophy.net/test/ogg.ogg" alt="" /></p>
+
+<p>“wave” file(“.wav”) :</p>
+
+<p><img src="https://hpr.dogphilosophy.net/test/wav.wav" alt="" /></p>
+
+<p>FLAC file (“.flac”) :</p>
+
+<p><img src="https://hpr.dogphilosophy.net/test/flac.flac" alt="" /></p>
+
+<p>CAF file (“.caf”) :</p>
+
+<p><img src="https://hpr.dogphilosophy.net/test/cafopus.caf" alt="" /></p>
+
+<p>Spotify Podcast:</p>
+
+<p><img src="https://open.spotify.com/episode/31AxcwYdjsFtStds5JVWbT" alt="" /></p>
+
+<h2 id="special-media-links">Special media links</h2>
+
+<p><img src="/jekyll-theme-yat/assets/devstories.webm" alt="" /></p>
+
+<p><a href="https://www.youtube.com/watch?v=kCHGDRHZ4eU"><img src="https://i.imgur.com/bc9HOJU.png" alt="w:1100" /></a></p>
+
+<p>Tips:</p>
+<ul>
+  <li>Use pipes (<code class="language-plaintext highlighter-rouge">|</code>) to delineate columns, and dashes to delineate the header row from the rest of the table.</li>
+  <li>Spacing doesn’t matter to the markdown processor, any extra white space is removed, but it can really help with readability.
+The two markdown examples below both create this table.</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Use pipes <code class="language-plaintext highlighter-rouge">(</code></td>
+      <td><code class="language-plaintext highlighter-rouge">)</code> to delineate columns, and dashes to delineate the header row from the rest of the table.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Footnote <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>UrbanGISer</name></author><category term="markdown" /><category term="test" /><summary type="html"><![CDATA[Put the math expression within $…$:]]></summary></entry><entry><title type="html">Markdown Simple Test 1</title><link href="/jekyll-theme-yat/markdown/2015/02/28/test-markdown.html" rel="alternate" type="text/html" title="Markdown Simple Test 1" /><published>2015-02-28T00:00:00+00:00</published><updated>2015-02-28T00:00:00+00:00</updated><id>/jekyll-theme-yat/markdown/2015/02/28/test-markdown</id><content type="html" xml:base="/jekyll-theme-yat/markdown/2015/02/28/test-markdown.html"><![CDATA[<p>You can write regular <a href="https://markdowntutorial.com/">markdown</a> here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to <a href="http://markdowntutorial.com/">take 5 minutes to learn how to write in markdown</a> - it’ll teach you how to transform regular text into bold/italics/headings/tables/etc.</p>
+
+<p><strong>Here is some bold text</strong></p>
+
+<h2 id="here-is-a-secondary-heading">Here is a secondary heading</h2>
+
+<p>Here’s a useless table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Number</th>
+      <th style="text-align: left">Next number</th>
+      <th style="text-align: left">Previous number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Five</td>
+      <td style="text-align: left">Six</td>
+      <td style="text-align: left">Four</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Ten</td>
+      <td style="text-align: left">Eleven</td>
+      <td style="text-align: left">Nine</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Seven</td>
+      <td style="text-align: left">Eight</td>
+      <td style="text-align: left">Six</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Two</td>
+      <td style="text-align: left">Three</td>
+      <td style="text-align: left">One</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>How about a yummy crepe?</p>
+
+<p><img src="https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg" alt="Crepe" /></p>
+
+<p>It can also be centered!</p>
+
+<p><img src="https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg" alt="Crepe" class="center-block" /></p>
+
+<p>Here’s a code chunk:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var foo = function(x) {
+  return(x + 5);
+}
+foo(3)
+</code></pre></div></div>
+
+<p>And here is the same code with syntax highlighting:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nf">foo</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>And here is the same code yet again but with line numbers:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nf">foo</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="boxes">Boxes</h2>
+<p>You can add notification, warning and error boxes like this:</p>
+
+<h3 id="notification">Notification</h3>
+
+<p class="box-note"><strong>Note:</strong> This is a notification box.</p>
+
+<h3 id="warning">Warning</h3>
+
+<p class="box-warning"><strong>Warning:</strong> This is a warning box.</p>
+
+<h3 id="error">Error</h3>
+
+<p class="box-error"><strong>Error:</strong> This is an error box.</p>]]></content><author><name>UrbanGISer</name></author><category term="markdown" /><category term="test" /><summary type="html"><![CDATA[You can write regular markdown here and Jekyll will automatically convert it to a nice webpage. I strongly encourage you to take 5 minutes to learn how to write in markdown - it’ll teach you how to transform regular text into bold/italics/headings/tables/etc.]]></summary></entry></feed>
