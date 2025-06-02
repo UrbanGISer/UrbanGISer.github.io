@@ -1,1 +1,292 @@
-<!DOCTYPE html><html><head><title>Data & Code</title></head><body><h1>Data & Code</h1><p>Coming soon...</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MIGIS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+    }
+
+    .content {
+      max-width: 1280px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      width: 100%;
+      background: #000;
+      padding: 0.5rem 0;
+      margin: 0;
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      text-align: right;
+    }
+
+    .nav-inner a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    .section {
+      margin: 2rem 0;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+
+    .card {
+      flex: 1;
+      padding: 0;
+      text-align: left;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0 0.25rem;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #0073e6;
+    }
+
+    .footer-line {
+      width: 100%;
+      border-top: 1px solid #ccc;
+      margin-top: 2rem;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .footer-line a {
+      margin: 0 10px;
+      color: #0073e6;
+      text-decoration: none;
+    }
+
+    .entry p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .entry a {
+      text-decoration: none;
+      color: #0073e6;
+      font-weight: bold;
+    }
+
+    .pub-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      gap: 1.5rem;
+    }
+
+    .pub-item img {
+      width: 360px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .pub-info h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .pub-info p {
+      margin: 0.3rem 0;
+    }
+
+    .pub-info a {
+      text-decoration: none;
+      color: #0073e6;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Full-width Banner Image -->
+  <img src="../assets/images/banner.jpg" alt="Banner" class="banner">
+
+  <!-- Navigation: outside content, full-width, no margin -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">KNIME101</a>
+      <a href="../publications/index.html">Publication</a>
+      <a href="../data/index.html">Data & Code</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+
+
+  <!-- Page content -->
+  <div class="content">
+    <!-- Journal -->
+    <header>
+      <h1>Journal Papers</h1>
+    </header>
+    <!-- Updates Section -->
+    <div class="section">
+      <h2>Updates</h2>
+      <div class="entry">
+        <p><strong>2025-06-01</strong> — <strong>New Paper Published:</strong> "Digital Divides in Telehealth
+          Accessibility" in npj Digital Medicine.
+          <a href="https://doi.org/10.1038/s41597-025-05254-8" target="_blank">Learn more →</a>
+        </p>
+        <p><strong>2025-05-10</strong> — Dataset on ZCTA-level cancer incidence interpolation released on Harvard
+          Dataverse.
+          <a href="#">Learn more →</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+
+      <div class="pub-item">
+        <img src="../assets/ipub/sd1.png" alt="Scientific Data">
+        <div class="pub-info">
+          <h3>US Cancer Incidence Dataset at the ZCTA Level Interpolated by Multi-Constraint Monte Carlo Simulation</h3>
+          <p><em>This project develops a high-resolution, multi-scale cancer dataset in the U.S. by using a
+              multi-constraint Monte Carlo simulation method to estimate suppressed county-level cancer data and further
+              downscale them to ZIP Code Tabulation Areas (ZCTAs). This method integrates population subgroup structures
+              and macro-level incidence rates as constraints, ensuring consistency and reliability across spatial
+              scales. The resulting dataset spans multiple geographic units, from state and county levels to ZCTAs,
+              enabling comprehensive analyses of cancer burden, facilitating in-depth spatial analyses, and designing
+              precision public health interventions across multiple scales.</em></p>
+          <h3>Harvard Dataverse Link</h3>
+          <p><a href="https://doi.org/10.7910/DVN/W3S2LW"
+              target="Harvard Dataverse">https://doi.org/10.7910/DVN/W3S2LW</a></p>
+          <h3>Related Paper</h3>
+          <p>Cancer Incidence Data at the ZCTA Level in the U.S. Interpolated by Multi-Constraint Monte Carlo
+            Simulation,Scientific Data, 2025. <a
+              href="https://doi.org/10.1038/s41597-025-05254-8">https://doi.org/10.1038/s41597-025-05254-8</a>
+          </p>
+          <p>A multi-constraint Monte Carlo Simulation approach to downscaling cancer data
+            Health & Place, 2025. <a
+              href="https://doi.org/10.1016/j.healthplace.2024.103411">https://doi.org/10.1016/j.healthplace.2024.103411</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <img src="../assets/ipub/ct1.png" alt="Cities">
+        <div class="pub-info">
+          <h3>Datasets for Chinese Urban Agglomerations</h3>
+          <p><em>The database contains shapefiles and official policy documents relevant to Chinese Urban Agglomerations
+              (中国城市群), also known as Megaregions. Its base map, in shapefile format, integrates a diverse array of 369
+              cities and counties, as implemented in Baidu Map. This expansive collection encompasses spatial
+              administrative boundary data and a variety of official Chinese policy documents issued over different
+              periods. It is an invaluable tool for those seeking to comprehend the development and present dynamics of
+              Chinese Urban Agglomerations. Furthermore, the database includes formal plans related to secondary
+              cross-regional cooperation, shedding light on the joint efforts and strategic plans among different areas.
+              This extensive dataset is crucial for researchers, policymakers, and anyone interested in the progression
+              and management of urban clusters in China.</em></p>
+          <h3>Harvard Dataverse Link</h3>
+          <p><a href="https://doi.org/10.7910/DVN/INBNQO"
+              target="Harvard Dataverse">https://doi.org/10.7910/DVN/INBNQO</a></p>
+          <h3>Related Paper</h3>
+          <p>Delineating urban agglomeration regions in China by network community scanning: Structures and policy
+            implications,Cities, 2025 <a
+              href="https://doi.org/10.1016/j.cities.2025.105721">https://doi.org/10.1016/j.cities.2025.105721</a>
+          </p>
+          <p>Detect cross-boundary regional collaboration in China using network community scanning and human mobility
+            data,Environment and Planning B: Urban Analytics and City Science, 2025 <a
+              href="https://doi.org/10.1177/23998083251339482">https://doi.org/10.1177/23998083251339482</a>
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Books-->
+    <header>
+      <h1>Books&Chapters</h1>
+    </header>
+
+    <div class="section">
+      <div class="pub-item">
+        <img src="../assets/ipub/book1.png" alt="Publication 1">
+        <div class="pub-info">
+          <h3>Datasets for Chinese Urban Agglomerations</h3>
+          <p><em>This textbook integrates GIS, spatial analysis, and computational methods for solving real-world
+              problems
+              in various policy-relevant social science applications. Thoroughly updated, the third edition showcases
+              the
+              best practices of computational spatial social science and includes numerous case studies with
+              step-by-step
+              instructions in ArcGIS Pro and open-source platform KNIME. Readers sharpen their GIS skills by applying
+              GIS
+              techniques in detecting crime hotspots, measuring accessibility of primary care physicians, forecasting
+              the
+              impact of hospital closures on local community, or siting the best locations for business.</em></p>
+          <h3>Harvard Dataverse Link</h3>
+          <p><a href="https://doi.org/10.7910/DVN/4CM7V4"
+              target="Harvard Dataverse">https://doi.org/10.7910/DVN/4CM7V4</a></p>
+          <h3>Related Paper</h3>
+          <p>Computational Methods and GIS Applications in Social Science, 3 Edition,CRC Press, Boca Raton, 2023 <a
+              href="https://doi.org/10.1201/9781003292302">https://doi.org/10.1201/9781003292302</a>
+          </p>
+          <p>Computational Methods and GIS Applications in Social Science- Lab Manual,3 Edition,CRC Press, Boca Raton,
+            2023 <a href="https://doi.org/10.1201/9781003304357">https://doi.org/10.1201/9781003304357</a>
+          </p>
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Full-width Footer Line Outside Content Block -->
+  <div class="footer-line">
+    <a href="https://scholar.google.com/citations?user=jq1dTeAAAAAJ">Google Scholar</a>
+    <a href="https://www.linkedin.com/in/lingbo-liu-92784729/">LinkedIn</a>
+    <a href="https://www.researchgate.net/profile/Lingbo-Liu">ResearchGate</a>
+  </div>
+</body>
+
+</html>

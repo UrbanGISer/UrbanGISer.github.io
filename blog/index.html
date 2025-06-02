@@ -1,1 +1,230 @@
-<!DOCTYPE html><html><head><title>Techoblog</title></head><body><h1>Techoblog</h1><p>Coming soon...</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MIGIS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+    }
+
+    .content {
+      max-width: 1280px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      width: 100%;
+      background: #000;
+      padding: 0.5rem 0;
+      margin: 0;
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      text-align: right;
+    }
+
+    .nav-inner a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    .section {
+      margin: 2rem 0;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+
+    .card {
+      flex: 1;
+      padding: 0;
+      text-align: left;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0 0.25rem;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #0073e6;
+    }
+
+    .footer-line {
+      width: 100%;
+      border-top: 1px solid #ccc;
+      margin-top: 2rem;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .footer-line a {
+      margin: 0 10px;
+      color: #0073e6;
+      text-decoration: none;
+    }
+
+    .entry p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .entry a {
+      text-decoration: none;
+      color: #0073e6;
+      font-weight: bold;
+    }
+
+    .pub-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      gap: 1.5rem;
+    }
+
+    .pub-item img {
+      width: 360px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .pub-info h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .pub-info p {
+      margin: 0.3rem 0;
+    }
+
+    .pub-info a {
+      text-decoration: none;
+      color: #0073e6;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Full-width Banner Image -->
+  <img src="../assets/images/banner.jpg" alt="Banner" class="banner">
+
+  <!-- Navigation: outside content, full-width, no margin -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">KNIME101</a>
+      <a href="../publications/index.html">Publication</a>
+      <a href="../data/index.html">Data & Code</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+
+
+  <!-- Page content -->
+  <div class="content">
+
+    <h2>Geospatial Analytics in KNIME 101</h2>
+    <p>Welcome to Geospatial Analytics in KNIME 101!</p>
+    <p>Geospatial Analytics is an increasingly essential field, as it allows us to extract valuable insights from
+      location-based data. With the Geospatial Analytics Extension for KNIME, you can unlock hidden patterns and
+      relationships within your datasets.</p>
+
+    <h3>1. KNIME Installation and Admin Mode</h3>
+    <ul>
+      <li>Right-click <code>knime.exe</code> > Properties > Compatibility, and check “Run as Administrator”.</li>
+      <li>GAEK nodes may fail due to Python environment write permission issues on Windows C drive.</li>
+    </ul>
+
+    <h3>2. GAEK Node Configuration Blank Issue</h3>
+    <ul>
+      <li>If the column count is very large, the node can appear blank due to slow list-building.</li>
+    </ul>
+
+    <h3>3. Missing Community Extensions</h3>
+    <ul>
+      <li>Try <code>Help > Install New Software…</code> and enable all software sites under “Available Software Sites”.
+      </li>
+    </ul>
+
+    <h3>4. Install KNIME Keras Integration</h3>
+    <pre><code>conda create -n knimedlcpu python=3.6 h5py=2.8 tensorflow-mkl=1.12 keras=2.2.4 pandas=0.25.3 -c conda-forge
+conda create -n knimedlgpu python=3.6 h5py=2.8 tensorflow=1.12 keras-gpu=2.2.4 pandas=0.25.3 -c conda-forge</code></pre>
+
+    <h3>5. Install KNIME Geospatial Env</h3>
+    <pre><code>conda env remove -n geospatial_env
+conda env create -f https://raw.githubusercontent.com/spatial-data-lab/knime-geospatial-extension/main/knime_extension/geospatial_env.yml</code></pre>
+
+    <h3>6. SSL Verification Errors</h3>
+    <p>If you encounter SSL errors while installing Python packages:</p>
+    <pre><code>conda config --set ssl_verify false</code></pre>
+
+    <h3>7. Long File Path Error on Windows</h3>
+    <p>Enable long paths via PowerShell (see Microsoft Docs).</p>
+
+    <h3>8. Create GeoAI Python Env for KNIME</h3>
+    <pre><code>conda create -n geoai python=3.9 knime-extension knime-python-base -c conda-forge -c knime</code></pre>
+
+    <h3>9. Chinese Font on FASRC Linux Desktop</h3>
+    <pre><code>mkdir -p ~/.local/share/fonts
+cp ~/Downloads/yh.ttf ~/.local/share/fonts/
+fc-cache -f -v
+fc-list | grep "yahei" -i</code></pre>
+
+    <p>Configure KNIME.ini:</p>
+    <pre><code>-Dswt.fixedFont=Microsoft YaHei-12
+-Dknime.force.swt.font=Microsoft YaHei-12</code></pre>
+  </div>
+
+
+  </div>
+
+
+  <!-- Full-width Footer Line Outside Content Block -->
+  <div class="footer-line">
+    <a href="https://scholar.google.com/citations?user=jq1dTeAAAAAJ">Google Scholar</a>
+    <a href="https://www.linkedin.com/in/lingbo-liu-92784729/">LinkedIn</a>
+    <a href="https://www.researchgate.net/profile/Lingbo-Liu">ResearchGate</a>
+  </div>
+</body>
+
+</html>
