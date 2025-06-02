@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MIGIS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+    }
+
+    .content {
+      max-width: 1280px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      width: 100%;
+      background: #000;
+      padding: 0.5rem 0;
+      margin: 0;
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      text-align: right;
+    }
+
+    .nav-inner a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    .section {
+      margin: 2rem 0;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+
+    .card {
+      flex: 1;
+      padding: 0;
+      text-align: left;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0 0.25rem;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #0073e6;
+    }
+
+    .footer-line {
+      width: 100%;
+      border-top: 1px solid #ccc;
+      margin-top: 2rem;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .footer-line a {
+      margin: 0 10px;
+      color: #0073e6;
+      text-decoration: none;
+    }
+
+    .entry p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .entry a {
+      text-decoration: none;
+      color: #0073e6;
+      font-weight: bold;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    h4 {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+
+    td,
+    th {
+      padding: 0.5rem;
+      vertical-align: top;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Full-width Banner Image -->
+  <img src="assets/images/banner.jpg" alt="Banner" class="banner">
+
+  <!-- Navigation: outside content, full-width, no margin -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="about.html">CV</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="publications/index.html">Publication</a>
+      <a href="projects/index.html">Projects</a>
+      <a href="data/index.html">Data & Code</a>
+    </div>
+  </nav>
+
+  <div class="content">
+    <h2>About</h2>
+    <p>
+      Lingbo Liu, Research Associate @ Center for Geographic Analysis, Harvard University. Email:
+      lingboliu@fas.harvard.edu
+    </p>
+    <p>
+      Lingbo Liu is a Research Associate at the CGA. He was a CGA post-doctoral research fellow, and previously
+      a tenured lecturer in the Department of Urban Planning, School of Urban Design, Wuhan University, and
+      a visiting scholar at Harvard CGA. Lingbo leads the Spatial Data Lab project at the CGA, focusing on the
+      development of advanced geospatial models and an open-source visual programming platform for GeoAI research,
+      as well as training programs to democratize geospatial data science. His research focuses on the study of healthy
+      cities, utilizing advanced geospatial AI models to capture the spatiotemporal features of urban systems. He aims
+      to parse the coupling mechanisms of the space-human system to provide decision support for public policy to make
+      cities healthier.
+    </p>
+
+    <h2>CV</h2>
+
+    <h4>EDUCATION</h4>
+    <table>
+      <tr>
+        <td align="left">2021-2022</td>
+        <td align="left">Visiting Scholar, Center for Geographic Analysis, Harvard University</td>
+      </tr>
+      <tr>
+        <td align="left">2012-2018</td>
+        <td align="left">PHD, Digital Urban Administration and Planning, School of Urban Design, Wuhan University</td>
+      </tr>
+      <tr>
+        <td align="left">2014-2015</td>
+        <td align="left">Visiting Scholar, Department of Geography and Anthropology, Louisiana State University (LSU)
+        </td>
+      </tr>
+      <tr>
+        <td align="left">2002-2005</td>
+        <td align="left">Master of Engineering, (Urban Planning & Design), School of Urban Design, Wuhan University</td>
+      </tr>
+      <tr>
+        <td align="left">1998-2002</td>
+        <td align="left">Bachelor of Engineering, (Urban Planning & Design), School of Urban Design, Wuhan University
+        </td>
+      </tr>
+    </table>
+
+    <h4>WORK EXPERIENCE</h4>
+    <table>
+      <tr>
+        <td align="left">2024-</td>
+        <td align="left">Research Associate, Center for Geographic Analysis, Harvard University</td>
+      </tr>
+      <tr>
+        <td align="left">2022-2024</td>
+        <td align="left">Postdoc Research Fellow, Center for Geographic Analysis, Harvard University</td>
+      </tr>
+      <tr>
+        <td align="left">2016-2022</td>
+        <td align="left">Deputy Director, Laboratory Center, School of Urban Design, Wuhan University</td>
+      </tr>
+      <tr>
+        <td align="left">2008-2022</td>
+        <td align="left">Tenured Lecturer, Department of Urban Planning, School of Urban Design, Wuhan University</td>
+      </tr>
+      <tr>
+        <td align="left">2009-2018</td>
+        <td align="left">Chief Planner, Hainan Huadu Urban Design Institute.Co.Ltd</td>
+      </tr>
+      <tr>
+        <td align="left">2005-2008</td>
+        <td align="left">Assistant Lecturer, Department of Urban Planning, School of Urban Design, Wuhan University
+        </td>
+      </tr>
+    </table>
+
+
+    <h4>BOOKS</h4>
+    <table>
+      <tr>
+        <th>Year</th>
+        <th>Book</th>
+      </tr>
+      <tr>
+        <td>2023</td>
+        <td>Fahui Wang, <strong>Lingbo Liu</strong>, <em>Computational Methods and GIS Applications in Social Science, 3
+            Edition</em>, CRC Press, Boca Raton, 2023.
+          <a href="https://doi.org/10.1201/9781003292302">https://doi.org/10.1201/9781003292302</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2023</td>
+        <td><strong>Lingbo Liu</strong>, Fahui Wang, <em>Computational Methods and GIS Applications in Social Science-
+            Lab Manual</em>, CRC Press, Boca Raton, 2023.
+          <a href="https://doi.org/10.1201/9781003304357">https://doi.org/10.1201/9781003304357</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2019</td>
+        <td>Fahui Wang, <em>Application of GIS and Quantitative Methods in Social and Economic Research (Chinese
+            Version)</em>, The Commercial Press<br>Translator: <strong>Lingbo Liu</strong>, 2019.
+          <a href="https://www.amazon.com/dp/7100173493"> Amazon Book Link</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2016</td>
+        <td>Jiandong Peng, <strong>Lingbo Liu</strong>, Guanghui Zhang, <em>Urban Design Thinking and Expression</em>,
+          China Building Industry Press, 2016 (in Chinese).
+          <a href="https://www.amazon.com/dp/7112176557"> Amazon Book Link</a>
+        </td>
+      </tr>
+    </table>
+
+    <h4>ARTICLES</h4>
+    <table>
+      <tr>
+        <th align="left">Year</th>
+        <th align="left">Article</th>
+      </tr>
+      <tr>
+        <td valign="top">2025</td>
+        <td valign="top"><strong>Liu, L.</strong> , Wang, F.(2025).
+          Delineating urban agglomeration regions in China by network community scanning: Structures and policy
+          implications. Cities, 158, 105721.
+          <a href="https://doi.org/10.1016/j.cities.2025.105721">https://doi.org/10.1016/j.cities.2025.105721</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Liu, C., <strong>Liu, L.</strong> , Peng, Z., Wu, H., Wang, F., Jiao, H., & Wang, J. (2025).
+          Planning public electric vehicle charging stations to balance efficiency and equality: A case study in
+          Wuhan, China.
+          Sustainable cities and society, 124, 106314.
+          <a
+            href="https://doi.org/https://doi.org/10.1016/j.scs.2025.106314 ">https://doi.org/https://doi.org/10.1016/j.scs.2025.106314</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Liu, L.</strong> , Cowan, L., Wang, F., Onega, T.(2025).
+          A multi-constraint Monte Carlo Simulation approach to downscaling cancer data. Health & Place, 91, 103411.
+          <a
+            href="https://doi.org/https://doi.org/10.1016/j.healthplace.2024.103411">https://doi.org/https://doi.org/10.1016/j.healthplace.2024.103411</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"> <strong>Liu, L.</strong>, Guan, W. W., Wang, F., & Bao, S.
+          (2025).
+          Visual programming-based Geospatial Cyberinfrastructure for open-source GIS education 3.0.
+          <em>Cartography and Geographic Information Science</em>, 1-13.
+          <a href="https://doi.org/10.1080/15230406.2025.24623426">https://doi.org/10.1080/15230406.2025.2462342</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"> Moen, E., Wang, Q., <strong>Liu, L.</strong>, Wang, F., Tosteson, A., Smith, R., Cowan, L., &
+          Onega, T.
+          (2025).
+          Cross-State Travel for Cancer Care and Implications for Telehealth Reciprocity.
+          <em>JAMA Network Open</em>, 8(2).
+          <a
+            href="http://dx.doi.org/10.1001/jamanetworkopen.2024.61021">http://dx.doi.org/10.1001/jamanetworkopen.2024.61021</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Fu, X., <strong>Liu, L.</strong>, Guan, W. W., Kalra, Y., Bao, S., Kötter, T., & Sturm, K.
+          (2025).
+          Advancing replicable and reproducible GIScience: an approach with KNIME.
+          <em>Cartography and Geographic Information Science</em>, 1-21.
+          <a href="https://doi.org/10.1080/15230406.2024.2446556">https://doi.org/10.1080/15230406.2024.2446556</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Tian, P., Cai, M., Wu, H., Wang, J., <strong>Liu, L.</strong>, Yang, H., & Peng, Z. (2025).
+          Unraveling the accessibility-usage mismatch: Identifying driving factors and weather-sensitive metro
+          stations using GPS data for improved metro competitiveness.
+          <em>Cities</em>, 159, 105794.
+          <a href="https://doi.org/10.1016/j.cities.2025.105794">https://doi.org/10.1016/j.cities.2025.105794</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Wang, S., Huang, X., Zhang, M., Bao, S., <strong>Liu, L.</strong>, Fu, X., Zhang, T., Song, Y.,
+          Kedron, P., & Wilson, J. (2025).
+          Open science 2.0: revolutionizing spatiotemporal data sharing and collaboration.
+          <em>Computational Urban Science</em>, 5(1), 4.
+          <a href="https://doi.org/10.1007/s43762-025-00165-1">https://doi.org/10.1007/s43762-025-00165-1</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">2024</td>
+        <td valign="top"><strong>Liu, L.</strong> 2024.
+          An ensemble framework for explainable geospatial machine learning models. International Journal of Applied
+          Earth
+          Observation and Geoinformation, 132, 104036. <a
+            href="https://doi.org/10.1016/j.jag.2024.104036">https://doi.org/10.1016/j.jag.2024.104036</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"> Liu, C., Peng, Z., <strong>Liu, L.*</strong>, Wu, H., Kinne, J., Cai, M., & Li, S. (2024).
+          XAI in geographic analysis of innovation: Evaluating proximity factors in the innovation networks of Chinese
+          technology companies through web-based data. Applied Geography, 171, 103373. <a
+            href="https://doi.org/10.1016/j.apgeog.2024.103373">https://doi.org/10.1016/j.apgeog.2024.103373</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Liu, L.</strong>; Wang, F., Fu, X., Kötter, T., Sturm, K., Guan, W. W., & Bao, S.
+          (2024).
+          Elevating the RRE Framework for Geospatial Analysis with Visual Programming Platforms: An Exploration with
+          Geospatial
+          Analytics Extension for KNIME. International Journal of Applied Earth Observation and Geoinformation, 130,
+          103948. <a href="https://doi.org/10.1016/j.jag.2024.103948">https://doi.org/10.1016/j.jag.2024.103948</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"> Wang, K., Peng, Z., Cai, M., Wu, H., <strong>Liu, L.</strong>, & Sun, Z. (2024). Coupling
+          graph neural networks and travel mode choice for human mobility prediction. Physica A: Statistical Mechanics
+          and
+          its Applications, 129872. <a
+            href="https://doi.org/10.1016/j.physa.2024.129872">https://doi.org/10.1016/j.physa.2024.129872</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"> Wang, S., Huang, X., Liu, P., Zhang, M., Biljecki, F., Hu, T., Fu, X., <strong>Liu,
+            L.</strong>,
+          Liu, X., & Wang, R. (2024). Mapping the landscape and roadmap of geospatial artificial intelligence (GeoAI)
+          in
+          quantitative human geography: An extensive systematic review. International Journal of Applied Earth
+          Observation
+          and Geoinformation, 128, 103734.<a
+            href="https://doi.org/10.1016/j.jag.2024.103734">https://doi.org/10.1016/j.jag.2024.103734</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Liu, L.</strong>; Fu, X.; Kötter, T.; Sturm, K.; Haubold, C.; Guan, W. W.; Bao, S. &
+          Wang, F.. 2024.
+          Geospatial Analytics Extension for KNIME. SoftwareX, 25, 101627. <a
+            href="https://doi.org/10.1016/j.softx.2023.101627">https://doi.org/10.1016/j.softx.2023.101627</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Liu, C.; Peng, Z.; <strong>Liu, L.</strong>; & Wu, H. 2024. Analysis of Spatiotemporal
+          Characteristics
+          and Influencing Factors of Electric Vehicle Charging Based on Multisource Data.
+          ISPRS International Journal of Geo-Information, 13(2), 37. <a
+            href="https://doi.org/10.3390/ijgi13020037">https://doi.org/10.3390/ijgi13020037</a>.</td>
+      </tr>
+      <tr>
+        <td valign="top"></td>
+        <td valign="top">
+          Tian, P., Cai, M., Sun, Z., Liu, S., Wu, H., <strong>Liu, L.*</strong>, & Peng, Z. (2024).
+          Effects of 3D urban morphology on CO<sub>2</sub> emissions using machine learning: Towards spatially
+          tailored low-carbon strategies in Central Wuhan, China.
+          <em>Urban Climate, 57</em>, 102122.
+          <a href="https://doi.org/10.1016/j.uclim.2024.102122">https://doi.org/10.1016/j.uclim.2024.102122</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"></td>
+        <td valign="top">
+          Wang, K., Peng, Z., Cai, M., Wu, H., <strong>Liu, L.</strong>,Sun, Z. (2024).
+          Coupling graph neural networks and travel mode choice for human mobility prediction.
+          <em>Physica A: Statistical Mechanics and its Applications, 646</em>, 129872.
+          <a href="https://doi.org/10.1016/j.physa.2024.129872">https://doi.org/10.1016/j.physa.2024.129872</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">2023</td>
+        <td valign="top"><strong>Liu, L.</strong>; Alford-Teaster, J.; Onega; T.; Wang, F.. 2023. Refining 2SVCA method
+          for measuring
+          telehealth accessibility of primary care physicians in Baton Rouge, Louisiana. Cities, 138: 104364. <a
+            href="https://doi.org/10.1016/j.cities.2023.104364">https://doi.org/10.1016/j.cities.2023.104364</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Wang, F.; Zeng, Y.; <strong>Liu, L.</strong>; Onega, T.. 2023. Disparities in spatial
+          accessibility of primary
+          care in Louisiana: From physical to virtual accessibility. Frontiers in Public Health, 11:1154574. <a
+            href="https://doi.org/10.3389/fpubh.2023.1154574">https://doi.org/10.3389/fpubh.2023.1154574</a>.</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Sun, Z.; Kang, D.; Jiao, H.; Yang Y.; Xue, W.; Wu, H.; <strong> Liu, L. </strong>; Su, Y.;
+          Peng, Z.. 2023. Spatial and Temporal
+          Evolution of the Characteristics of Spatially Aggregated Elements in an Urban Area: A Case Study of Wuhan,
+          China. ISPRS International Journal of Geo-Information, 12 (11), 448. <a
+            href="https://doi.org/10.3390/ijgi12110448">https://doi.org/10.3390/ijgi12110448</a>.</td>
+      </tr>
+      <tr>
+        <td valign="top"></td>
+        <td valign="top">Wang, K.; Zhang, L.; Cai, M.; <strong>Liu, L.</strong>; Wu, H.; Peng, Z. Measuring Urban
+          Poverty Spatial by
+          Remote Sensing and Social Sensing Data: A Fine-Scale Empirical Study from Zhengzhou. Remote Sensing. 2023,
+          15, 381. <a href="https://doi.org/10.3390/rs15020381">https://doi.org/10.3390/rs15020381</a></td>
+      </tr>
+      <tr>
+        <td valign="top"></td>
+        <td valign="top">Wan, L., Chen, J. *, Wu, H., Su, F., Jiang, Q., Ma, L., Chen, H., Peng, Z., Sun, Z.,
+          <strong>Liu, L.</strong>*,
+          & Chen, L. (2023). Deep learning for inflammatory diseases classification based on reflectance confocal
+          microscopy. Journal of the American Academy of Dermatology, 88(5), e283–e284. <a
+            href="https://doi.org/10.1016/j.jaad.2022.09.043">https://doi.org/10.1016/j.jaad.2022.09.043</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"></td>
+        <td valign="top">Liu, C.; Peng, Z.; <strong>Liu, L.</strong>; Li, S. Innovation Networks of Science and
+          Technology Firms:
+          Evidence from China. Land, 2023, 12, 1283. <a
+            href="https://doi.org/10.3390/land12071283">https://doi.org/10.3390/land12071283</a></td>
+      </tr>
+      <tr>
+        <td valign="top">2022</td>
+        <td valign="top"><strong>Liu, L.</strong>; Yu, H.; Zhao, J.; Wu, H.; Peng, Z.; Wang, R. Multiscale Effects of
+          Multimodal Public
+          Facilities Accessibility on Housing Prices Based on MGWR: A Case Study of Wuhan, China. ISPRS International
+          Journal of Geo-Information, 2022. 11(1).<a
+            href="https://doi.org/10.3390/ijgi11010057">https://doi.org/10.3390/ijgi11010057</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Liu, L.</strong>; Wang, R.; Guan, W W.; Bao, S., Yu, H.; Fu, X.; Liu, H. Assessing
+          Reliability of
+          Chinese Geotagged Social Media Data for Spatiotemporal Representation of Human Mobility. ISPRS International
+          Journal of Geo-Information, 2022. 11(2).<a
+            href="https://doi.org/10.3390/ijgi11020145">https://doi.org/10.3390/ijgi11020145</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Wang, K., Sun, Z., Cai, M., <strong>Liu, L.</strong>, Wu, H., & Peng, Z. (2022). Impacts of
+          Urban Blue-Green
+          Space on Residents' Health: A Bibliometric Review. International journal of environmental research and
+          public health, 19(23), 16192. <a
+            href="https://doi.org/10.3390/ijerph192316192">https://doi.org/10.3390/ijerph192316192</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Chen, L.; <strong>Liu, L.</strong>; Wu, H.; Peng, Z.; Sun, Z. Change of Residents’ Attitudes
+          and Behaviors
+          toward Urban Green Space Pre- and Post- COVID-19 Pandemic. Land 2022, 11, 1051. <a
+            href="https://doi.org/10.3390/land11071051">https://doi.org/10.3390/land11071051</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Wang, R.; <strong>Liu, L.</strong>; Wu, H.; Peng, Z. Correlation Analysis between Urban
+          Elements and COVID-19
+          Transmission Using Social Media Data. Int. J. Environ. Res. Public Health 2022, 19, 5208. <a
+            href="https://doi.org/10.3390/ijerph19095208">https://doi.org/10.3390/ijerph19095208</a></td>
+      </tr>
+      <tr>
+        <td valign="top">2021</td>
+        <td valign="top"><strong>Liu, L.</strong>; Peng, Z.; Wu, H. Entropy Models and Their Applications in Urban
+          Studies, City Planning Review.2021,45(12):27-39.
+          (Chinese,2021)</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Liu, L.; Hu, T.; Bao, S.; Wu, H.; Peng, Z.; Wang, R. The Spatiotemporal Interaction Effect of
+          COVID-19 Transmission in the United States. ISPRS International Journal of Geo-Information 2021, 10, 387.<a
+            href="https://doi.org/10.3390/ijgi10060387">https://doi.org/10.3390/ijgi10060387</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Peng, Z.; Ao, S.; <strong>Liu, L.</strong> *; Bao, S.; Hu, T.; Wu, H.; Wang, R. Estimating
+          Unreported COVID-19
+          Cases with a Time-Varying SIR Regression Model. Int. J. Environ. Res. Public Health 2022, 19, 5208. <a
+            href="https://doi.org/10.3390/ijerph18031090">https://doi.org/10.3390/ijerph18031090</a></td>
+      </tr>
+      <td valign="top"> </td>
+      <td valign="top">Zhao, J.; Peng, Z.; <strong>Liu, L.</strong> *; Yu, Y.; Yu, Y. Evaluation on the Internal Public
+        Space Quality in
+        Affordable Housing Based on Multi-Source Data and IPA Analysis. Land, 2021. 10(10): p. 1000<a
+          href="https://doi.org/10.3390/land10101000">https://doi.org/10.3390/land10101000</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Zhao, J.; Peng, Z.; <strong>Liu, L.</strong>*; Yu, Y.; Shang, Z. Public Space Layout
+          Optimization in Affordable
+          Housing Based on Social Network Analysis. Land, 2021. 10(9): p. 955<a
+            href="https://doi.org/10.3390/land10090955">https://doi.org/10.3390/land10090955</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Peng, Z., Bai, G., Wu, H., <strong>Liu, L.</strong>, & Yu, Y. (2021). Travel mode recognition
+          of urban residents
+          using mobile phone data and MapAPI. Environment and Planning B: Urban Analytics and City Science, 48(9),
+          2574–2589. <a href="https://doi.org/10.1177/2399808320983001">https://doi.org/10.1177/2399808320983001</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Sun, Z.; Jiao, H.; Wu, H.; Peng, Z.; <strong>Liu, L.</strong>. Block2vec: An Approach for
+          Identifying Urban
+          Functional Regions by Integrating Sentence Embedding Model and Points of Interest. ISPRS Int. J. Geo-Inf.
+          2021, 10, 339. <a href="https://doi.org/10.3390/ijgi10050339">https://doi.org/10.3390/ijgi10050339</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Xiong, X.; <strong>Liu, L.</strong>; Peng, Z.; Wu, H. Physical Activities in Public Squares:
+          The Impact of
+          Companionship on Chinese Residents’ Health. Land 2021, 10, 720. <a
+            href="https://doi.org/10.3390/land10070720">https://doi.org/10.3390/land10070720</a></td>
+      </tr>
+      <tr>
+        <td valign="top">2020</td>
+        <td valign="top">Peng, Z.; Wang, R.; <strong>Liu, L.</strong> *; Wu, H. Exploring Urban Spatial Features of
+          COVID-19 Transmission
+          in Wuhan Based on Social Media Data. ISPRS International Journal of Geo-Information 2020, 9, 402. <a
+            href="https://doi.org/10.3390/ijgi9120669">https://doi.org/10.3390/ijgi9120669</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Hu, T.; Guan, W.W.; Zhu, X.; Shao, Y.; <strong>Liu, L.</strong>, et al. Building an Open
+          Resources Repository
+          for COVID-19 Research. Data and Information Management 2020, 4, 130-147.<a
+            href="https://doi.org/10.2478/dim-2020-0012">https://doi.org/10.2478/dim-2020-0012</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Peng, Z.; Wang, R.; <strong>Liu, L.</strong> *; Wu, H. Fine-Scale Dasymetric Population Mapping
+          with Mobile
+          Phone and Building Use Data Based on Grid Voronoi Method. ISPRS International Journal of Geo-Information
+          2020, 9, 344. <a href="https://doi.org/10.3390/ijgi9060344">https://doi.org/10.3390/ijgi9060344</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Wang, X., Zhou, Q., He, Y., <strong>Liu, L.</strong>, Ma, X., Wei, X., Jiang, N., Liang, L.,
+          Zheng, Y., Ma, L.,
+          Xu, Y., Yang, D., Zhang, J., Yang, B., Jiang, N., Deng, T., Zhai, B., Gao, Y., Liu, W., Bai, X., … Gao, Z.
+          (2020). Nosocomial outbreak of COVID-19 pneumonia in Wuhan, China. The European respiratory journal, 55(6),
+          2000544. <a href="https://doi.org/10.1183/13993003.00544-2020">https://doi.org/10.1183/13993003.00544-2020</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Liu, L.</strong>; Zhong, Y.; Ao, S.; Wu, H. Exploring the Relevance of Green Space and
+          Epidemic Diseases
+          Based on Panel Data in China from 2007 to 2016. International Journal of Environmental Research and Public
+          Health 2019, 16, 2551. <a
+            href="https://doi.org/10.3390/ijerph16142551">https://doi.org/10.3390/ijerph16142551</a></td>
+      </tr>
+      <tr>
+        <td valign="top">2019</td>
+        <td valign="top"><strong>Liu, L.</strong>; Xia, B.; Wu, H.; Zhao, J.; Peng, Z.; Yu, Y. Delimitating the Natural
+          City with Points
+          of Interests Based on Service Area and Maximum Entropy Method. Entropy 2019, 21, 458. <a
+            href="https://doi.org/10.3390/e21050458">https://doi.org/10.3390/e21050458</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Jin, P.; Gao, Y.; Liu, L*.; Peng, Z.; Wu, H. Maternal Health and Green Spaces in China: A
+          Longitudinal Analysis of MMR Based on Spatial Panel Model. Healthcare 2019, 7, 154. <a
+            href="https://doi.org/10.3390/healthcare7040154">https://doi.org/10.3390/healthcare7040154</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Liu, L.</strong>; Peng, Z.; Wu, H. Classification of POI Natural Cities Scale and
+          Hierarchy Based on
+          Head/Tail Breaks, Urban Planning International 2019,3. (Chinese,2019)</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Liu, L.</strong>; Hu, T.; Bao, S.; Wu, H.; Peng, Z.; Wang, R. The Spatiotemporal
+          Interaction Effect of
+          COVID-19 Transmission in the United States. ISPRS International Journal of Geo-Information 2019, 10, 387. <a
+            href="https://doi.org/10.3390/ijgi10060387">https://doi.org/10.3390/ijgi10060387</a></td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Peng, Z.; Ao, S.; <strong>Liu, L.</strong> *; Bao, S.; Hu, T.; Wu, H.; Wang, R. Estimating
+          Unreported COVID-19
+          Cases with a Time-Varying SIR Regression Model. International Journal of Environmental Research and Public
+          Health 2019, 18, 1090. <a
+            href="https://doi.org/10.3390/ijerph18051090">https://doi.org/10.3390/ijerph18051090</a></td>
+      </tr>
+    </table>
+
+    <h4>PRESENTATION</h4>
+    <table>
+      <tr>
+        <th align="left">Year</th>
+        <th align="left">Presentation</th>
+      </tr>
+      <tr>
+        <td valign="top">2024</td>
+        <td valign="top">Ru Wang, Shuming Bao, Wendy Guan, <strong>Lingbo Liu</strong>, KNIME workshop for
+          Spatiotemporal Innovation, Human Sciences Research Council (HSRC) – Harvard Workshop and Symposium on
+          Spatiotemporal Innovation, The eResearch Knowledge Centre (eRKC) of the Human Sciences Research Council
+          (HSRC), February 6-8, Pretoria, South Africa</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Lingbo Liu</strong>, Ru Wang, Xiao Huang, Siqin Wang, Enhancing Geospatial Analysis
+          with AutoML and Explainable AI through Visual Programming Platform, April 16-20, AAG 2024, Honolulu,
+          Hawaii</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Lingbo Liu</strong>, Workflow-based GeoAI Analysis with No/Low-Code Visual
+          Programming, April 23, ODSC East, Boston, Massachusetts</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Lingbo Liu</strong>, An Ensemble Framework for Explainable GeoAI Models, May 16-17,
+          CGA Conference: Evaluating the Science of Geospatial AI, Cambridge, Massachusetts</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Lingbo Liu</strong>, Tian Tian, Siqin Wang, KNIME GEE extension for remote sensing
+          data and GeoAI, IEEE GRSS/ISDE-YSIN Symposium on GeoAI for Remote Sensing Data Analysis, May 28-29, El
+          Jadida, Morocco</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Lingbo Liu</strong>, Democratizing GIS Science through Visual Programming for
+          Fine-tuning AI Foundation Models, Trillion Pixel Challenge: AI Foundation Models Powering Geospatial
+          Digital Twins, September 4-5, Huntsville, Alabama</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Lingbo Liu</strong>, Graph Neural Network for Spatial Network Community Detection in
+          Healthcare Service Area Delineation, International symposium on spatiotemporal data science, July 23,
+          Arlington, VA</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Lingbo Liu</strong>, Replicable Data Analysis with Geospatial Analytics for KNIME,
+          Workshop on Spatiotemporal Innovation and GeoAI Applications, July 22, Arlington, VA</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Jeff Blossom, <strong>Lingbo Liu</strong>, Spatial Analysis Methods for Humanitarian and
+          Disaster-response Applications, September 17, Cambridge, Massachusetts</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Lingbo Liu</strong>, Enabling Collaborative Healthcare Research with KNIME Hub, KNIME
+          Business Hub for Spatiotemporal Data Science, December 16, Cambridge, Massachusetts</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top"><strong>Lingbo Liu</strong>, Leveraging Open Visual Programming Platform for AI Foundation
+          Model Applications, AGU, December 12, Washington D.C.</td>
+      </tr>
+      <tr>
+        <td valign="top">2023</td>
+        <td valign="top">Lingbo Liu, Refining 2SVCA method for measuring telehealth accessibility of primary care
+          physicians in Baton Rouge, The Symposium of Spatiotemporal Data Science, Cambridge, MA</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Wendy Guan, Lingbo Liu, Xiaokang Fu, Shuming Bao, Workflow Based Tools for Integrated
+          Spatiotemporal Research, Annual conference of American Association of Geographers, Denver</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Xiaokang Fu, Lingbo Liu, Meifang Li, Validation, calibration, and estimation of 2SFCA and
+          i2SFCA. A case study from Shenzhen, China based on online appointment data, Annual conference of American
+          Association of Geographers, Denver</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Lingbo Liu, Xiaokang Fu, Spatiotemporal Network Analysis of Cities in the Belt and Road
+          Initiative Countries based on Social Media Mobility Index, Annual conference of American Association of
+          Geographers, Denver</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Lingbo Liu, GIS Moves Online: An Integrated Solution for Spatiotemporal Research, Teaching and
+          Applications, Tools of the Trade: The Way Forward, Cambridge, MA</td>
+      </tr>
+      <tr>
+        <td valign="top">2022</td>
+        <td valign="top">Wendy Guan, Lingbo Liu, Tobias Koetter, Geospatial Analytics for All, KNIME Fall Summit</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Wendy Guan, Lingbo Liu, New Release of the Geospatial Extension for KNIME, Harvard CGA, online
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Lingbo Liu, Introduction to Weibo Mobility Index, Future Data Lab webinar, online</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Lingbo Liu, Fahui Wang, Disparities in Telehealth Accessibility to Primary Care Physicians in
+          Baton Rouge, Louisiana, The fifth annual Politics and Computational Social Science (PaCSS) conference,
+          Cambridge, MA</td>
+      </tr>
+      <tr>
+        <td valign="top">2021</td>
+        <td valign="top">Lingbo Liu, Workbook for Quantitative methods and Socioeconomic Applications in GIS, Future
+          Data Lab webinar, online</td>
+      </tr>
+      <tr>
+        <td valign="top">2020</td>
+        <td valign="top">Lingbo Liu, Wuhan's Rejuvenation Plan for the post-pandemic Era, UN-Habitat-Philippine
+          Government Local Government Forum, keynote report, online</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Lingbo Liu, Big Data in Epidemic Prevention and Control, UN-Habitat, COVID-19 Wuhan Guidance
+          Papers, Keynote Report, online</td>
+      </tr>
+      <tr>
+        <td valign="top"> </td>
+        <td valign="top">Lingbo Liu, Workflow-Based Spatial-Temporal Prediction Model and Statistical Analysis of
+          Pandemic Data, COVID-19 Data Analysis Series Public Webinar, online</td>
+      </tr>
+      <tr>
+        <td valign="top">2019</td>
+        <td valign="top">Lingbo Liu, Recognition of Urban Expansion Patterns in Asia Based on Local Space Entropy, China
+          Urban Planning Annual Conference, Chongqing</td>
+      </tr>
+      <tr>
+        <td valign="top">2018</td>
+        <td valign="top">Lingbo Liu, Landscape Quality Improvement Strategy of Simeitang Park, UN-Habitat Place Making
+          Week International Conference, Wuhan</td>
+      </tr>
+    </table>
+
+    <h4>REPORT</h4>
+    <table>
+      <tr>
+        <th align="left">Year</th>
+        <th align="left">Report</th>
+      </tr>
+      <tr>
+        <td valign="top">2020</td>
+        <td valign="top">COVID-19 Wuhan Guidance Papers-Emerging Experiences on Responding to COVID-19 in Chinese Cities
+          and Townships, UN-HABITAT</td>
+      </tr>
+      <tr>
+        <td valign="top">2020</td>
+        <td valign="top">Research on urban space quality evaluation system based on Homo Urbanicus theory, Wuhan
+          Planning and Research Institute</td>
+      </tr>
+      <tr>
+        <td valign="top">2017</td>
+        <td valign="top">Research on the competitiveness of urban agglomerations in the middle reaches of the Yangtze
+          River, Wuhan Planning and Research Institute</td>
+      </tr>
+      <tr>
+        <td valign="top">2016</td>
+        <td valign="top">Research on interpretation of urban built-up area and spatial recognition of metropolitan area
+          in Wuhan, Wuhan Planning and Research Institute</td>
+      </tr>
+    </table>
+
+    <h4>RESEARCH FUNDING</h4>
+    <table>
+      <tr>
+        <th align="left">Year</th>
+        <th align="left">Research Funding</th>
+      </tr>
+      <tr>
+        <td valign="top">2021</td>
+        <td valign="top">Spatiotemporal transmission mechanism and modeling of infectious diseases supported by
+          multi-source data, Core member, National Natural Science Foundation of China,52078390</td>
+      </tr>
+      <tr>
+        <td valign="top">2020</td>
+        <td valign="top">Interpretation Method of Urban Spatial Structure Based on Big Data and Deep Learning, Core
+          member, National Natural Science Foundation of China,51978535</td>
+      </tr>
+    </table>
+
+
+  </div>
+
+  <div class="footer-line">
+    <a href="https://scholar.google.com/citations?user=jq1dTeAAAAAJ">Google Scholar</a>
+    <a href="https://www.linkedin.com/in/lingbo-liu-92784729/">LinkedIn</a>
+    <a href="https://www.researchgate.net/profile/Lingbo-Liu">ResearchGate</a>
+  </div>
+</body>
+
+</html>
