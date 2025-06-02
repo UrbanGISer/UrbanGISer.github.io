@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://harvard-cga-sdl.github.io/sitemap.xml
