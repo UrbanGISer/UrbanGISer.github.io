@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Lingbo Liu | Spatial Data Lab</title>
+  <title>MIGIS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -14,86 +14,160 @@
     }
 
     .content {
-      max-width: 1000px;
+      max-width: 1280px;
       margin: auto;
       padding: 2rem;
-    }
-
-    nav {
-      background: #eee;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-
-    .section {
-      margin: 2rem 0;
-    }
-
-    footer {
-      background: #000;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-
-    .footer-links a {
-      margin: 0 10px;
-      color: #fff;
-      background: #ccc;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-
-    .thumbnail-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .thumbnail-row img {
-      width: 32%;
-      border-radius: 8px;
     }
 
     .banner {
       width: 100%;
       height: auto;
       display: block;
-      margin-top: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      width: 100%;
+      background: #000;
+      padding: 0.5rem 0;
+      margin: 0;
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      text-align: right;
+    }
+
+    .nav-inner a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    .section {
+      margin: 2rem 0;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+
+    .card {
+      flex: 1;
+      padding: 0;
+      text-align: left;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0 0.25rem;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #0073e6;
+    }
+
+    .footer-line {
+      width: 100%;
+      border-top: 1px solid #ccc;
+      margin-top: 2rem;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .footer-line a {
+      margin: 0 10px;
+      color: #0073e6;
+      text-decoration: none;
+    }
+
+    .entry p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .entry a {
+      text-decoration: none;
+      color: #0073e6;
+      font-weight: bold;
     }
   </style>
 </head>
 
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="cv.html">CV</a>
-    <a href="blog/index.html">Techoblog</a>
-    <a href="publications/index.html">Publication</a>
-    <a href="projects/index.html">Projects</a>
-    <a href="data/index.html">Data & Code</a>
-  </nav>
-
   <!-- Full-width Banner Image -->
   <img src="assets/images/banner.jpg" alt="Banner" class="banner">
 
+  <!-- Navigation: outside content, full-width, no margin -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="publications/index.html">Publication</a>
+      <a href="projects/index.html">Projects</a>
+      <a href="data/index.html">Data & Code</a>
+    </div>
+  </nav>
+
+
+  <!-- Page content -->
   <div class="content">
-    <header>
-      <h1>MIGIS: Meaningful Intelligence in GIS</h1>
-    </header>
+
+    <!-- Updates Section -->
+    <div class="section">
+      <h2>Updates</h2>
+      <div class="entry">
+        <p><strong>2025-06-01</strong> — <strong>New Paper Published:</strong> "Digital Divides in Telehealth
+          Accessibility" in npj Digital Medicine.
+          <a href="https://doi.org/10.1038/s41597-025-05254-8" target="_blank">Learn more →</a>
+        </p>
+        <p><strong>2025-05-10</strong> — Dataset on ZCTA-level cancer incidence interpolation released on Harvard
+          Dataverse.
+          <a href="#">Learn more →</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Events Section -->
+    <div class="section">
+      <h2>Events</h2>
+      <div class="entry">
+        <p><strong>2025-07-21</strong> — <strong>GeoAI & GenAI Workshop</strong>, Harvard CGA, Cambridge MA.
+          <a href="#">Learn more →</a>
+        </p>
+        <p><strong>2025-03-15</strong> — <strong>Presentation at AAG 2025</strong>: “GNN for Health Service Area
+          Detection”.
+          <a href="#">Learn more →</a>
+        </p>
+      </div>
+    </div>
 
     <div class="section">
-      <h2>About Me</h2>
+      <h2>MIGIS: Mindful Intelligence in GIS</h2>
       <p>Lingbo Liu is a research associate at the Center for Geographic Analysis (CGA), Harvard University. He was a
         CGA postdoctoral research fellow, and previously a tenured lecturer in the Department of Urban Planning, School
         of Urban Design, Wuhan University, and a visiting scholar at Harvard CGA. He earned his doctoral degree in Urban
@@ -108,21 +182,41 @@
 
     <div class="section">
       <h2>Featured Projects</h2>
-      <div class="thumbnail-row">
-        <img src="assets/images/feature1.png" alt="Project 1">
-        <img src="assets/images/feature2.png" alt="Project 2">
-        <img src="assets/images/feature1.png" alt="Project 3">
+      <div class="card-grid">
+        <div class="card">
+          <img src="assets/images/feature1.png" alt="GeoAI">
+          <h3>GeoAI</h3>
+          <p>Explainable geospatial machine learning models for public health and climate resilience.</p>
+          <a href="projects/geoai.html">Learn more →</a>
+        </div>
+        <div class="card">
+          <img src="assets/images/feature2.png" alt="Healthy Cities">
+          <h3>Healthy Cities</h3>
+          <p>Accessibility modeling and urban health analysis based on human mobility and spatial equity.</p>
+          <a href="projects/healthcity.html">Learn more →</a>
+        </div>
+        <div class="card">
+          <img src="assets/images/feature3.png" alt="Visual Programming">
+          <h3>Visual Programming</h3>
+          <p>KNIME-based visual tools for geospatial workflows, teaching, and reproducible research.</p>
+          <a href="projects/knime.html">Learn more →</a>
+        </div>
+        <div class="card">
+          <img src="assets/images/feature4.png" alt="Open Data">
+          <h3>Open Data</h3>
+          <p>Open datasets for telehealth, urban modeling, and spatial equity analytics.</p>
+          <a href="data/index.html">Explore datasets →</a>
+        </div>
       </div>
     </div>
   </div>
 
-  <footer>
-    <div class="footer-links">
-      <a href="https://scholar.google.com/citations?user=jq1dTeAAAAAJ">Google Scholar</a>
-      <a href="https://www.linkedin.com/in/lingbo-liu-92784729/">LinkedIn</a>
-      <a href="https://www.researchgate.net/profile/Lingbo-Liu">ResearchGate</a>
-    </div>
-  </footer>
+  <!-- Full-width Footer Line Outside Content Block -->
+  <div class="footer-line">
+    <a href="https://scholar.google.com/citations?user=jq1dTeAAAAAJ">Google Scholar</a>
+    <a href="https://www.linkedin.com/in/lingbo-liu-92784729/">LinkedIn</a>
+    <a href="https://www.researchgate.net/profile/Lingbo-Liu">ResearchGate</a>
+  </div>
 </body>
 
 </html>
