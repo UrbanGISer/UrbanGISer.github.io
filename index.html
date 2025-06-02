@@ -8,11 +8,15 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+    }
+
+    .content {
       max-width: 1000px;
       margin: auto;
       padding: 2rem;
-      background: #fff;
-      color: #333;
     }
 
     nav {
@@ -60,14 +64,17 @@
       width: 32%;
       border-radius: 8px;
     }
+
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 0;
+    }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Lingbo Liu | Spatial Data Lab</h1>
-  </header>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="cv.html">CV</a>
@@ -78,20 +85,26 @@
   </nav>
 
   <!-- Full-width Banner Image -->
-  <img src="assets/images/banner.jpg" alt="Banner" style="width: 100%; height: auto; display: block; margin-top: 1rem;">
+  <img src="assets/images/banner.jpg" alt="Banner" class="banner">
 
-  <div class="section">
-    <h2>About Me</h2>
-    <p>Research Associate, Center for Geographic Analysis, Harvard University. Specializing in GeoAI, digital health,
-      smart cities, and spatial data science.</p>
-  </div>
+  <div class="content">
+    <header>
+      <h1>Lingbo Liu | Spatial Data Lab</h1>
+    </header>
 
-  <div class="section">
-    <h2>Featured Projects</h2>
-    <div class="thumbnail-row">
-      <img src="assets/images/feature1.png" alt="Project 1">
-      <img src="assets/images/feature2.png" alt="Project 2">
-      <img src="assets/images/feature1.png" alt="Project 3">
+    <div class="section">
+      <h2>About Me</h2>
+      <p>Research Associate, Center for Geographic Analysis, Harvard University. Specializing in GeoAI, digital health,
+        smart cities, and spatial data science.</p>
+    </div>
+
+    <div class="section">
+      <h2>Featured Projects</h2>
+      <div class="thumbnail-row">
+        <img src="assets/images/feature1.png" alt="Project 1">
+        <img src="assets/images/feature2.png" alt="Project 2">
+        <img src="assets/images/feature1.png" alt="Project 3">
+      </div>
     </div>
   </div>
 
