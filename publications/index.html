@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Lingbo Liu | Publications</title>
+  <title>MIGIS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -14,43 +14,105 @@
     }
 
     .content {
-      max-width: 1000px;
+      max-width: 1280px;
       margin: auto;
       padding: 2rem;
     }
 
-    nav {
-      background: #eee;
-      padding: 1rem;
-      text-align: center;
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;
+      padding: 0;
     }
 
-    nav a {
+    nav {
+      width: 100%;
+      background: #000;
+      padding: 0.5rem 0;
+      margin: 0;
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      text-align: right;
+    }
+
+    .nav-inner a {
       margin: 0 10px;
       text-decoration: none;
-      color: #333;
+      color: #fff;
       font-weight: bold;
+      font-size: 0.95rem;
     }
 
     .section {
       margin: 2rem 0;
     }
 
-    footer {
-      background: #000;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+    .card-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 1rem;
+      justify-content: space-between;
     }
 
-    .footer-links a {
-      margin: 0 10px;
-      color: #fff;
-      background: #ccc;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
+    .card {
+      flex: 1;
+      padding: 0;
+      text-align: left;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0 0.25rem;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card a {
+      font-size: 0.9rem;
       text-decoration: none;
+      color: #0073e6;
+    }
+
+    .footer-line {
+      width: 100%;
+      border-top: 1px solid #ccc;
+      margin-top: 2rem;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .footer-line a {
+      margin: 0 10px;
+      color: #0073e6;
+      text-decoration: none;
+    }
+
+    .entry p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .entry a {
+      text-decoration: none;
+      color: #0073e6;
+      font-weight: bold;
     }
 
     .pub-item {
@@ -61,7 +123,7 @@
     }
 
     .pub-item img {
-      width: 180px;
+      width: 360px;
       height: auto;
       border-radius: 5px;
     }
@@ -79,67 +141,248 @@
       text-decoration: none;
       color: #0073e6;
     }
-
-    .banner {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-top: 0;
-    }
   </style>
 </head>
 
 <body>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../cv.html">CV</a>
-    <a href="../blog/index.html">Techoblog</a>
-    <a href="index.html">Publication</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="../data/index.html">Data & Code</a>
-  </nav>
-
   <!-- Full-width Banner Image -->
   <img src="../assets/images/banner.jpg" alt="Banner" class="banner">
 
-  <div class="content">
-    <header>
-      <h1>Publications</h1>
-    </header>
+  <!-- Navigation: outside content, full-width, no margin -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../publications/index.html">Publication</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../data/index.html">Data & Code</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
 
+
+  <!-- Page content -->
+  <div class="content">
+    <!-- Journal -->
+    <header>
+      <h1>Journal Papers</h1>
+    </header>
     <div class="section">
+
       <div class="pub-item">
-        <img src="../assets/images/pub1.jpg" alt="Publication 1">
+        <img src="../assets/ipub/sd1.png" alt="Scientific Data">
         <div class="pub-info">
-          <h3>Digital Divides in Telehealth Accessibility for Cancer Care in the United States</h3>
-          <p><em>npj Digital Medicine, 2025</em></p>
-          <p>This paper investigates spatial and digital inequities in telehealth access for cancer care using
-            nationwide Medicare data and geospatial models.</p>
-          <p><a href="https://doi.org/10.1038/s41597-025-05254-8" target="_blank">DOI: 10.1038/s41597-025-05254-8</a>
+          <h3>Cancer Incidence Data at the ZCTA Level in the U.S. Interpolated by Multi-Constraint Monte Carlo
+            Simulation</h3>
+          <p><em>Scientific Data, 2025</em></p>
+          <p>High-quality cancer data are fundamental for public health research and policy, but cancer data for small
+            geographic units and population subgroups in the United States are rarely available due to small-sample
+            suppression rules, spatial coarsening, and data incompleteness. These limitations hinder high-resolution
+            spatial analyses and precision public health interventions. This study provides a high-resolution cancer
+            incidence dataset for the U.S., generated through a multi-constraint Monte Carlo simulation framework that
+            reconstructs suppressed county-level cancer data and systematically disaggregates them to ZIP Code
+            Tabulation Areas (ZCTAs), guided by demographic constraints. This method integrates population subgroup
+            structures and macro-level incidence rates as constraints, ensuring consistency and reliability across
+            spatial scales. The resulting dataset spans multiple geographic units, from state and county levels to
+            ZCTAs, enabling comprehensive analyses of cancer burden, in-depth spatial analyses, and precision public
+            health interventions across multiple scales..</p>
+          <p><a href="https://doi.org/10.1038/s41597-025-05254-8"
+              target="_blank">https://doi.org/10.1038/s41597-025-05254-8</a>
           </p>
         </div>
       </div>
 
       <div class="pub-item">
-        <img src="../assets/images/pub2.jpg" alt="Publication 2">
+        <img src="../assets/ipub/ct1.png" alt="Cities">
         <div class="pub-info">
-          <h3>Reconciling 2SFCA and i2SFCA via distance decay parameterization</h3>
-          <p><em>International Journal of Geographical Information Science, 2025</em></p>
-          <p>We introduce a hybrid parameter estimation framework to unify traditional and improved floating catchment
-            models for healthcare access analysis.</p>
-          <p><a href="#" target="_blank">DOI: pending</a></p>
+          <h3>Delineating urban agglomeration regions in China by network community scanning: Structures and policy
+            implications</h3>
+          <p><em>Cities, 2025</em></p>
+          <p>This study employs the network community scanning (NCS) method to analyze inter-city human flow network
+            patterns using the most recent 2023 Baidu mobility data in China. Specifically, it uses the Community
+            Multiresolution Overlap Scan (CMOS) technique to define regions comparable to the recently government
+            designated urban agglomerations (UAs) and other administrative units (i.e., economic regions and provincial
+            units) so that the delineated and targeted regions overlap most. The results reveal a larger spatial context
+            for multiple UAs to interact as well as a centric structure to detect within each UA. By comparing
+            designated UAs and the NCS-derived comparable regions, it largely validates the rationale of UAs. More
+            in-depth examination reveals discrepancies on a finer scale. Based on community affiliation index (CAI) and
+            PageRank centrality, the centric structure analysis of designated UAs identifies whether an UA is absent of
+            any central city, led by a dominant center, or jointly anchored by multiple centers. The efficient network
+            delineation algorithm supported by timely mining of big data enables policy makers to examine the
+            hierarchical structure of cities in real time and make necessary adjustments.</p>
+          <p><a href="https://doi.org/10.1016/j.cities.2025.105721"
+              target="_blank">https://doi.org/10.1016/j.cities.2025.105721</a></p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <img src="../assets/ipub/hp1.png" alt="Health & Place">
+        <div class="pub-info">
+          <h3>A multi-constraint Monte Carlo Simulation approach to downscaling cancer data</h3>
+          <p><em>Health & Place, 2025</em></p>
+          <p>This study employs an innovative multi-constraint Monte Carlo simulation method to estimate suppressed
+            county-level cancer counts for population subgroups and extend the downscaling from county to ZIP Code
+            Tabulation Areas (ZCTA) in the U.S. Given the known cancer counts at a higher geographic level and larger
+            demographic groups at the same geographic level as constraints, this method uses the population structure as
+            probability in the Monte Carlo simulation process to estimate suppressed data entries. It not only ensures
+            consistency across various data levels but also accounts for demographic structure that drives varying
+            cancer risks. The 2016–2020 cancer incidence data from the Utah Cancer Registry is used to validate our
+            approach. The method yields results with high precision and consistency across the full urban-rural
+            continuum, and significantly outperforms several machine-learning models such as Random Forest and Extreme
+            Gradient Boosting.</p>
+          <p><a href="https://doi.org/10.1016/j.healthplace.2024.103411"
+              target="_blank">https://doi.org/10.1016/j.healthplace.2024.103411</a></p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <img src="../assets/ipub/epb1.png" alt="Environment and Planning B">
+        <div class="pub-info">
+          <h3>Detect cross-boundary regional collaboration in China using network community scanning and human mobility
+            data</h3>
+          <p><em>Environment and Planning B: Urban Analytics and City Science, 2025</em></p>
+          <p>Accurately identifying and analyzing cross-boundary regional cooperation remains challenging due to
+            administrative constraints and data limitations. This study utilizes high-resolution human mobility data,
+            network community scanning (NCS), and association rule mining to examine trans-provincial cooperation across
+            369 Chinese cities, leveraging Location-Based Services (LBS) data from 1.3 billion users. The findings
+            indicate that border-adjacent cooperation dominates trans-provincial interactions in China, while
+            non-adjacent cooperation is embedded within broader cooperative networks formed through adjacent ties
+            reinforcing the interwoven nature of cross-administrative collaborations. Additionally, emerging cooperative
+            clusters extend beyond officially designated urban agglomerations, revealing unrecognized regional synergies
+            not yet captured in planning frameworks. These results highlight discrepancies between actual collaboration
+            linkages and government-defined regional plans, underscoring the need for adaptive, data-driven policymaking
+            and offering practical insights for regional planning and governance.</p>
+          <p><a href="https://doi.org/10.1177/23998083251339482"
+              target="_blank">https://doi.org/10.1177/23998083251339482</a></p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <img src="../assets/ipub/ctag1.png" alt="Cartography and Geographic Information Science">
+        <div class="pub-info">
+          <h3>Visual programming-based Geospatial Cyberinfrastructure for open-source GIS education 3.0</h3>
+          <p><em>Cartography and Geographic Information Science, 2025</em></p>
+          <p>Accurately identifying and analyzing cross-boundary regional cooperation remains challenging due to
+            administrative constraints and data limitations. This study utilizes high-resolution human mobility data,
+            network community scanning (NCS), and association rule mining to examine trans-provincial cooperation across
+            369 Chinese cities, leveraging Location-Based Services (LBS) data from 1.3 billion users. The findings
+            indicate that border-adjacent cooperation dominates trans-provincial interactions in China, while
+            non-adjacent cooperation is embedded within broader cooperative networks formed through adjacent ties
+            reinforcing the interwoven nature of cross-administrative collaborations. Additionally, emerging cooperative
+            clusters extend beyond officially designated urban agglomerations, revealing unrecognized regional synergies
+            not yet captured in planning frameworks. These results highlight discrepancies between actual collaboration
+            linkages and government-defined regional plans, underscoring the need for adaptive, data-driven policymaking
+            and offering practical insights for regional planning and governance.</p>
+          <p><a href="https://doi.org/10.1080/15230406.2025.2462342"
+              target="_blank">https://doi.org/10.1080/15230406.2025.2462342</a></p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <img src="../assets/ipub/jama1.png" alt="JAMA Network Open">
+        <div class="pub-info">
+          <h3>Cross-State Travel for Cancer Care and Implications for Telehealth Reciprocity</h3>
+          <p><em>JAMA Network Open, 2025</em></p>
+          <p>This cross-sectional study analyzed fee-for-service Medicare claims data
+            for beneficiaries (aged ≥66 years) with a diagnosis of breast, colon, lung, or pancreatic cancer between
+            January 1, 2017, and December 31, 2020. Analyses were performed between January 1 and July 30, 2024.
+            The primary outcome of interest was receipt of cancer care across state lines.
+            Frequencies of cancer services (surgery, radiation, and chemotherapy) were summarized by cancer type in
+            relation to in-state vs out-of-state receipt of care based on state of residence for Medicare beneficiaries.
+            Cross-state delivery of cancer services was also quantified by adjacent vs nonadjacent states and overall
+            between-state flows for service utilization.The study included 1 040 874 Medicare beneficiaries with cancer.
+            The mean (SD) age of the study
+            population was 76.5 (7.4) years. Most patients were female (68.2%) and urban residing (78.5%); one-quarter
+            (25.9%) were aged between 70 and 74 years. In terms of race and ethnicity, 7.0% of patients identified as
+            Black, 3.4% as Hispanic, and 85.5% as White. Overall, approximately 6.9% of cancer care was delivered across
+            state lines, with the highest proportion (8.3%) occurring for surgical care, followed by radiation (6.7%)
+            and chemotherapy (5.6%) services. Out of all cross-state care, 68.4% occurred in adjacent states. Frequency
+            of cross-state cancer care increased with patient rurality. Compared with urban-residing patients, isolated
+            rural-residing patients were 2.5 times more likely to cross state lines for surgical procedures (18.5% vs
+            7.5%), 3 times more likely to cross state lines for radiation therapy services (16.9% vs 5.7%), and almost 4
+            times more likely to cross state lines for chemotherapy services (16.3% vs 4.2%).
+            In this cross-sectional study of Medicare claims data, a notable proportion of
+            cancer services occurred across state lines, particularly for rural-residing patients. These results
+            highlight the need for cross-state telehealth policies that recognize the prevalence of care delivery from
+            geographically distant specialized oncology services..</p>
+          <p><a href="http://dx.doi.org/10.1001/jamanetworkopen.2024.61021"
+              target="_blank">http://dx.doi.org/10.1001/jamanetworkopen.2024.61021</a></p>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Books-->
+    <header>
+      <h1>Books&Chapters</h1>
+    </header>
+
+    <div class="section">
+      <div class="pub-item">
+        <img src="../assets/ipub/book1.png" alt="Publication 1">
+        <div class="pub-info">
+          <h3>Computational Methods and GIS Applications in Social Science, 3 Edition</h3>
+          <p><em>CRC Press, Boca Raton, 2023</em></p>
+          <p>This textbook integrates GIS, spatial analysis, and computational methods for solving real-world problems
+            in various policy-relevant social science applications. Thoroughly updated, the third edition showcases the
+            best practices of computational spatial social science and includes numerous case studies with step-by-step
+            instructions in ArcGIS Pro and open-source platform KNIME. Readers sharpen their GIS skills by applying GIS
+            techniques in detecting crime hotspots, measuring accessibility of primary care physicians, forecasting the
+            impact of hospital closures on local community, or siting the best locations for business.</p>
+          <p> </p>
+          <p>FEATURES: (1) Fully updated using the latest version of ArcGls Pro and open-source platform KNIME;(2)
+            Features two brand-new chapters on agent-based modeling and big data analytics;(3)
+            Provides newly automated tools for regionalization, functional region delineation,accessibility measures,
+            planning for maximum equality in accessibility, and agent-basedcrime simulation;(4)
+            Includes many compelling examples and real-world case studies related to socialscience, urban planning, and
+            public policy;(5)
+            Provides a website for downloading data and programs for implementing all case studies included in the book
+            and the KNlME lab manual
+          </p>
+          <p><a href="https://doi.org/10.1201/9781003292302" target="_blank">https://doi.org/10.1201/9781003292302</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <img src="../assets/ipub/book2.png" alt="Publication 2">
+        <div class="pub-info">
+          <h3>Computational Methods and GIS Applications in Social Science- Lab Manual</h3>
+          <p><em>CRC Press, Boca Raton, 2023</em></p>
+          <p>This lab manual is a companion to the third edition of the textbook computational Methods and
+            GisApplications in social science. lt uses the open-source platform KNlME to illustrate a
+            step-by-step implementation of each case study in the book, KNlME is a workflow-based platform supporting
+            visual programming and multiple scripting language such as R, Python, and java. The intuitive, structural
+            workflow not only helps students better understand the methodology of each case study in the book, but also
+            enables them to easily replicate, transplant and expand the workflow for further exploration with new data
+            or models. This lab manual could also be used as a GlS automation reference for advanced users in
+            spatial analysis.</p>
+          <p> </p>
+          <p>FEATURES: (1) The first hands-on, open-source KNlME lab manual written in tutorial style and focusedon GlS
+            applications in social science;(2)
+            Includes 22 case studies from the United states and China that parallel the methodsdeveloped in the
+            textbook;(3)
+            Provides clear step-by-step explanations on how to use the open-source platformKNlME to understand basic and
+            advanced analytical methods through real-life case studies;(4)
+            Enables readers to easily replicate and expand their work with new data and models;(5)A valuable guide for
+            students and practitioners worldwide engaged in efforts to developGlS automation in spatial analysis
+          </p>
+          <p><a href="https://doi.org/10.1201/9781003304357" target="_blank">https://doi.org/10.1201/9781003304357</a>
+          </p>
         </div>
       </div>
     </div>
+
   </div>
 
-  <footer>
-    <div class="footer-links">
-      <a href="#">Google Scholar</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">ResearchGate</a>
-    </div>
-  </footer>
+
+  <!-- Full-width Footer Line Outside Content Block -->
+  <div class="footer-line">
+    <a href="https://scholar.google.com/citations?user=jq1dTeAAAAAJ">Google Scholar</a>
+    <a href="https://www.linkedin.com/in/lingbo-liu-92784729/">LinkedIn</a>
+    <a href="https://www.researchgate.net/profile/Lingbo-Liu">ResearchGate</a>
+  </div>
 </body>
 
 </html>
