@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://harvard-cga-sdl.github.io/sitemap.xml
+Sitemap: https://UrbanGISer.github.io/sitemap.xml
