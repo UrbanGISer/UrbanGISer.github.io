@@ -213,9 +213,21 @@ fc-list | grep "yahei" -i</code></pre>
     <p>Configure KNIME.ini:</p>
     <pre><code>-Dswt.fixedFont=Microsoft YaHei-12
 -Dknime.force.swt.font=Microsoft YaHei-12</code></pre>
+
+    <h3>10. Using Local LLM on FASRC </h3>
+    <p>Install huggingface_hub </p>
+    <pre><code>pip install -U huggingface_hub</code></pre>
+    <p>Download model to shared drive</p>
+    <pre><code>huggingface-cli download llava-hf/llava-1.5-7b-hf \
+>   --local-dir /n/holylabs/xxx/Users/lingboliu/LocalModels/llava-1.5-7b-hf \
+>   --local-dir-use-symlinks False</code></pre>
+    <p>Install transformer and accelerate</p>
+    <pre><code> conda info --envs
+    conda activate geoai
+    pip install transformers accelerate</code></pre>
+
+
   </div>
-
-
   </div>
 
 
