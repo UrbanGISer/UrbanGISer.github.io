@@ -226,6 +226,16 @@ fc-list | grep "yahei" -i</code></pre>
     conda activate geoai
     pip install transformers accelerate</code></pre>
 
+    <h3>11. Install KNIME Package (Linux)</h3>
+    <pre><code>TGZ="/n/home13/lingboliu/Downloads/knime_5.7.0.linux.gtk.x86_64.tar.gz"
+DEST="/n/home13/lingboliu/Downloads/knime_5.7.0"
+mkdir -p "$DEST"
+tar -xzf "$TGZ" -C "$DEST" --strip-components=1</code></pre>
+
+    <h3>12. Clear Workspace for New KNIME</h3>
+    <pre><code>WS="/n/home13/lingboliu/knime-workspace-OLD"
+mv "$WS/.metadata" "$WS/.metadata.bak"</code></pre>
+
 
   </div>
   </div>
